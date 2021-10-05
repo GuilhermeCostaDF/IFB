@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var numE, numVBrancos, numVNulos, numVValidos
+        var porceBrancos, porceNulos, porceValidos
+        numE=parseInt(prompt("Número de eleitores do município"))
+        numVBrancos=parseInt(prompt("Número de votos brancos"))
+        numVNulos=parseInt(prompt("Número de votos nulos"))
+        
+        numVValidos= (numE - (numVBrancos + numVNulos))
+            
+        porceBrancos= (numVBrancos/numE)*100
+        porceNulos= (numVNulos/numE)*100
+        porceValidos= (numVValidos/numE)*100
+        
+        console.log("Número total de eleitores: ", numE)
+        console.log("Votos em brancos: ", porceBrancos,"%")
+        console.log("Votos nulos: ", porceNulos,"%")
+        console.log("Votos válidos: ", porceValidos,"%")
+
+    </script>      
+</body>
+</html>

@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Slim&family=Roboto+Slab:wght@100;300;400&display=swap');
+
+*{margin:0; padding: 0;}
+
+body{
+	background-color: rgb(255,255,255);
+}
+
+header, img{
+	width: 100%;
+	height: 380px;
+}
+
+nav{
+	background-color: #1B969F;
+	text-align: center;
+	padding: 10px;
+	
+
+}
+
+a{
+	font: 1.2rem 'Nova Slim', sans;
+	text-decoration: none;
+}
+
+.a-menu{
+	margin-right: 40px;
+	font-weight: bold;
+}
+
+
+.a-menu:link, .a-menu:visited{ /* Quando o menu é aberto*/
+	color: #FFF;
+}
+
+.a-menu:hover, .a-menu:active{/* Quando o mouse passa sobre*/
+	color: rgb(30, 61, 102);
+}
+
+article{
+	width: 100%;
+	background-color: #FFF;
+	padding: 20px;
+	box-sizing: border-box;
+
+}
+
+h1{
+  font: 3rem 'Nova Slim', cursive;
+  color: #00796B;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+p{
+  font: 1.2rem 'Roboto Slab', serif;
+  color:#777;
+	text-align: justify;
+	line-height: 30px;
+}
+
+#txt-preto{
+	color:#000;
+}
+
+section{
+	padding: 20px;
+}
+
+h2{
+	font: 2rem 'Nova Slim', cursive;
+	color: #00796B;
+	margin-bottom: 20px;
+}
+
+#pag-cursos{
+	background-color: #1B969F;
+	
+}
+
+#pag-cursos h2{
+	color: #FFF;
+}
+
+#pag-cursos p{
+	color: #FFF;
+	margin-top: 30px;
+}
+
+ul{
+	list-style-type: circle;
+	padding: 20px 50px;
+}
+
+li{
+	font: 1.2rem 'Roboto Slab', serif;
+	color: #FFF;
+	margin-bottom: 10px;
+}
+
+#pag-modalidades{
+	background-color: #EEE;
+}
+
+#container{
+	display: flex;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+.card{/** caixa **/
+	background-color: #FFF;
+	margin: 10px;
+	width: 25%;
+	border-radius: 8px; /** arredondamento da borda**/
+	box-shadow: 0 4px 8px #CCC;/** sombra na borda**/
+	transition: 0.5s;
+}
+
+.card:hover{  /** efeito ao passar o cursor em cima**/
+	box-shadow:  0 8px 16px #CCC;
+
+}
+
+.card-content{  /** id dos textos**/
+	padding: 10px;
+}
+
+.card-content p{
+	font: 1rem 'Roboto Slab', serif;
+  	text-align: justify;
+	line-height: 20px;
+	
+}
+
+h3{
+	font: 200% 'Nova Slim', cursive;
+	color: #1B969F;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#pag-aulas{
+
+}
+
+#pag-aulas p{
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#container-aulas{
+	display: flex;
+}
+
+.coluna-aulas{
+	padding: 40px;
+}
+
+.container-imagens{
+	margin-top: 40px;
+	display: flex;  /** alinha os elementos**/
+	justify-content: center;  /** centralizou os elementos**/
+	align-items: center; /**centralizou os itens dentro dos elementos. Imagens e textos**/
+}
+
+.container-imagens p{
+	color: #000;
+}
+
+.img-icones{
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+}
+
+video{
+	width: 400px;
+}
+
+footer{
+	background-color: #000;
+	padding: 20px;
+	color: #FFF;
+}
+
+footer p{
+	text-align: center;
+	color: #FFF;
+}
+
+footer a{
+	color: #FFF;
+}
+
+footer a:hover{
+	color: #1B969F;
+}
+
+/*pagina agendamentos*/
+
+#pag-matricula{
+
+}
+
+#pag-matricula p{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+form{
+	width: 400px;
+	margin: auto; /*margem 0 faz com que ele se centralize*/
+	
+}
+
+input, select, textarea{
+	width: 100%; /*está dentro do form e vai ocupar todo o espaço*/
+	height: 25px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	box-sizing: border-box;
+	border: 1px solid #c4c4c4 ; /* width, border style, cor*/
+	color: #777
+}
+
+label, fieldset, input, select, textarea{
+	font: 1rem 'Roboto Slab', serif;
+}
+
+fieldset{
+	border: 1px solid #ccc ;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#data-hora-num{
+	display: flex ;
+}
+
+input[type="radio"], input[type="checkbox"]{  /*formata somente input que o type é rádio e checkbox}*/
+	width: 15px;
+	height: 15px;
+	margin-left: 50px;
+}
+
+textarea{
+	height: 80px;
+}
+
+#botoes-form{
+	display: flex;
+}
+
+input[type="submit"], input[type="reset"]{
+	margin: 20px;
+	background-color: #1B969F;
+	color: #FFF;
+	border:0;
+	border-radius: 5px;
+}
+
+input[type="reset"]{
+	background-color: #F37E7E;
+}
+
+
+
+
+
+
+
+/**seletor {propriedade:valor;}
+inline= style="color:red";"
+interno= <style type="text/css">
+        p{color:blue;}
+        </style>
+externo
+link rel="stylesheet" type="tex/css" href="" 
+
+Cor: 
+rgb e hexadecimal 
+
+. = seletor de class
+# = seletor de id
+text-indent= faz parágrafo
+nav= menu
+
+**/

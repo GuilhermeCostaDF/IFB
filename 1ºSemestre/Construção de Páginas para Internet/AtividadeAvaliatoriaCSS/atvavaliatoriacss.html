@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Black Alley - Streetwear and Sports Apparel</title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Guilherme Costa"/>
+		<meta name="keywords" content="Streetwear,Moda,Sport,Esporte,Roupas" />
+		<meta name="description" content="Site oficial da marca Black Alley" />
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+	</head>
+
+<body>	
+		<nav>    
+			<a class="a-menu" href="#">HOME</a>
+			<a class="a-menu" href="#pag-sobre">SOBRE</a>
+			<a class="a-menu" href="#pag-prod">PRODUTOS</a>
+			<a class="a-menu" href="#pag-enc">ENCOMENDAS</a>   
+		</nav> 
+
+		<header>  
+			<img src="img/BLACK2.png" alt="Banner da loja Black Ally com o seu logo">
+		</header>
+
+		<article id="pag-sobre">
+			<h1>Black Alley</h1>
+
+			<h2>Streetwear ativo para uma vida urbana, vivida em ritmo acelerado.</h2>
+		
+			<p><strong>Streetwear</strong> é um estilo que representa a essência <b>urbana</b> e cultural de cada comunidade ou tribo ao redor do mundo, através de roupas e acessórios. Se analisarmos de forma mais profunda, validamos que o streetwear está muito além de produtos e da definição simplória: "roupas das ruas".</p>
+
+			<p>A <strong>Black Ally</strong> é a opção perfeita para roupas de ginástica e urbanas, altamente flexíveis, permitindo movimentos em qualquer direção. Ao contrário da maioria das roupas de ginástica, elas ficam lindas, mesmo quando estão encharcadas de suor. Black Alley também tem uma seleção de roupas mais casuais que irão ajudá-lo a ficar com estilo quando estiver indo e voltando da academia.</p>
+		</article>	
+
+		<section id="pag-prod">
+
+			<h1>Produtos</h1>	
+
+			<div id="cards-container">
+
+				<div class="card">
+					<img class="img-cards" src="https://cdn.def-shop.com/cdn-cgi/image/w=530,q=95,f=auto/pic1300x1725/mister-tee-hoodie-black-522158.jpg" />	
+					<div class="card-content">
+						<h3>Mister Tee</h3>
+						<p>R$ 220,00</p>	
+					</div>
+				</div>
+
+				<div class="card">
+					<img class="img-cards" src="https://cdn.def-shop.com/cdn-cgi/image/w=530,q=95,f=auto/pic1300x1725/sik-silk-t-shirt-beige-790569.jpg" />	
+					<div class="card-content">
+						<h3>Sik Silk</h3>
+						<p>R$ 120,00</p>	
+					</div>
+				</div>
+
+				<div class="card">
+					<img class="img-cards" src="https://cdn.def-shop.com/cdn-cgi/image/w=530,q=95,f=auto/pic1300x1725/1/mister-tee-t-shirt-white-378621.jpg" />	
+					<div class="card-content">
+						<h3>Tee Women</h3>
+						<p>R$ 120,00</p>	
+					</div>
+				</div>
+
+				<div class="card">
+					<img class="img-cards" src="https://cdn.def-shop.com/cdn-cgi/image/w=530,q=95,f=auto/pic1300x1725/urban-classics-hoodie-black-800648.jpg" />	
+					<div class="card-content">
+						<h3>Urban Classics</h3>
+						<p>R$ 120,00</p>	
+					</div>
+				</div>
+			</div>		
+		</section>
+
+		<section id="pag-enc">		
+
+			<h1>Encomendas</h1>
+					
+			<form name="Encomendas" method="" action="">
+
+				<label for="nome">Nome:</label>
+				<input id="nome" type="text" name="nome_completo"  placeholder="Nome Completo" required="true">
+				
+				<label for="email">E-mail:</label>
+				<input id="email" type="email" name="email" placeholder="nome@email.com" required="true">
+				
+				<label for="produto">Produto:</label>
+				<select id="produto" name="produto">
+					<option value="">Selecione</option>
+					<option value="Mister Tee">Mister Tee</option>
+					<option value="Sik Silk">Sik Silk</option>
+					<option value="Mister Tee Women">Mister Tee Women</option>
+					<option value="Urban Classics">Urban Classics</option>
+				</select>
+				
+				  <label for="qtd">Quantidade:</label>
+				  <input type="number" id="qtd" name="qtd" min="1" max="50" placeholder="1">
+			
+				<fieldset>  
+					<legend>Forma Retirada</legend>
+					<input id="delivery" type="radio" name="retirada" value="delivery" ><label for="delivery">Delivery</label><br/>
+					<input id="local" type="radio" name="retirada" value="local" ><label for="local">Retirar no Local</label> 
+				</fieldset>
+				
+				<label for="comentarios">Comentários</label>
+				<textarea id="comentarios" cols="70" rows="5"></textarea>
+				
+				<div id="botoes-form">				
+					<input type="submit" name="btn-encomendar" value="Encomendar" />
+					<input type="reset" name="btn-cancelar" value="Cancelar" />
+				</div>
+			</form>
+
+		</section>
+   	
+   		<footer>
+   			<p>Desenvolvido por <a href="http://instagram.com/chileninhow" target="_blank"><strong>Guilherme Costa</strong></a> - 2020 </p>
+   		</footer>	
+
+</body>
+</html>

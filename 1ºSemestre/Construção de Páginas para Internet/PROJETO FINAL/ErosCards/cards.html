@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+*{
+	padding:0;
+	margin:0;
+}
+
+html{
+	box-sizing: border-box;
+	font-size: 62.5%
+}
+
+body{
+	background-color: #FCF7F8;
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.grid{
+	display: grid;
+	width: 120em;
+	padding: 1.5rem;
+	grid-gap: 1em;
+	grid-template-columns: repeat(auto-fit, minmax(20rem,0.5fr));
+	align-items: start;
+
+
+}
+
+.grid-item{
+	background-color: #fff;
+	border:1px solid #c8c8c8;
+	border-radius: 0.4rem;
+	overflow: hidden;
+	box-shadow: 0 3rem 6rem rgba(0,0,0,0.1);
+	transition: 0.1s;
+	margin-bottom: 10px; /* tirar ou nao */
+	margin-top: 5px; /** tirar ou nao **/
+}
+
+.grid-item:hover{
+	transform: translateY(-1.0%);
+	box-shadow: 0 4rem 3rem rgba(0,0,0,0.5);
+}
+
+.card-img{
+	display: block;
+	width: 100%;
+	height: 10rem;
+	object-fit: cover;
+}
+
+.card-content{
+	padding: 0.5rem;
+}
+
+.card-header{
+	font-size: 2rem;
+	font-weight: 500;
+	color: #0d0d0d;
+	margin-bottom: 1.5rem;
+}
+
+.card-text{
+	font-size: 1.4rem;
+	letter-spacing: 0.1rem;
+	line-height: 1.7;
+	color: #3d3d3d;
+	margin-bottom: 2.5rem;
+}
+
+.btn-container{
+	display: flex;
+	box-sizing: border-box;
+	justify-content: space-between;
+}
+
+.card-btn, .card-btn2{
+	box-sizing: border-box;
+	display: block;
+	width: 45%;
+	padding: 0.5rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-align: center;
+	color: white;
+	background-color: #0F7E56;
+	border:none;
+	border-radius: 0.4rem;
+	transition: 0.2s;
+	cursor: pointer;	
+}
+
+.card-btn2{
+	background-color: #a7a8a7;
+}
+
+.card-btn:hover{
+	background-color: #38784b;
+}
+
+.card-btn2:hover{
+	background-color: #7d7d7d;
+}
+
+.card-btn p{
+	padding: 0.5rem;
+	text-align: center;
+}
+.card-btn2 p{
+	padding: 0.5rem;
+	text-align: center;
+
+}
+
+@media only screen and (max-width: 80em){
+	body{
+		padding: 2rem;
+	}
+
+	.grid{
+		grid-gap: 2rem;
+	}
+}
+
+</style>
+
+<body>
+	<div class="grid">
+		<div class="grid-item">
+			<div class="card">
+				<img class="card-img" src="imagem5.jpg">
+				<div class="card-content">
+					<h1 class="card-header">Lorem Ipsum</h1>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non orci finibus, mollis risus vitae, dictum ante. Vivamus tellus sem, congue a lorem a, accumsan auctor dolor.</p>
+					<div class="btn-container">	
+						<button class="card-btn"><p>Pré-Inscrição</p></button>
+						<button class="card-btn2"><p>Mais Informações</p></button>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="grid-item">
+			<div class="card">
+				<img class="card-img" src="imagem1.jpg">
+				<div class="card-content">
+					<h1 class="card-header">Lorem Ipsum</h1>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non orci finibus, mollis risus vitae, dictum ante. Vivamus tellus sem, congue a lorem a, accumsan auctor dolor.</p>
+					<div class="btn-container">	
+						<button class="card-btn"><p>Pré-Inscrição</p></button>
+						<button class="card-btn2"><p>Mais Informações</p></button>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="grid-item">
+			<div class="card">
+				<img class="card-img" src="imagem4.jpg">
+				<div class="card-content">
+					<h1 class="card-header">Lorem Ipsum</h1>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non orci finibus, mollis risus vitae, dictum ante. Vivamus tellus sem, congue a lorem a, accumsan auctor dolor.</p>
+					<div class="btn-container">	
+						<button class="card-btn"><p>Pré-Inscrição</p></button>
+						<button class="card-btn2"><p>Mais Informações</p></button>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="grid-item">
+			<div class="card">
+				<img class="card-img" src="imagem7.jpg">
+				<div class="card-content">
+					<h1 class="card-header">Lorem Ipsum</h1>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non orci finibus, mollis risus vitae, dictum ante. Vivamus tellus sem, congue a lorem a, accumsan auctor dolor.</p>
+					<div class="btn-container">	
+						<button class="card-btn"><p>Pré-Inscrição</p></button>
+						<button class="card-btn2"><p>Mais Informações</p></button>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>

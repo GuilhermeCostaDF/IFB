@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var umNum, result;
+        umNum = parseInt(prompt("Informe um número"));
+        result = dobro(umNum);
+        console.log("O dobro é: ", result);
+        console.log(parOuImpar(umNum));
+
+        function dobro(n) {
+               let d;
+               d = n * 2 
+               return d; 
+        }  
+
+        function parOuImpar(n){
+            if(n % 2 == 0){
+                return "O número é par!!!"
+            }
+            else{
+                return "O número é impar!!!"
+            }
+        }
+
+    </script>
+</body>
+</html>

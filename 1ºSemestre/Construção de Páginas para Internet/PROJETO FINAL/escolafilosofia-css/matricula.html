@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Escola de filosofia Eros</title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Rute Miliana"/>
+		<meta name="keywords" content="filosofia, curso, curso de filosofia, aula de filosofia, aula filosofia, curso filosofia"/>
+		<meta name="description" content=" Curso de filosofia"/>
+		<link rel="stylesheet" type="text/css" href="style.css.css"/>
+	</head>
+	<body>
+		<header>
+			<img src="/escolafilosofia/img/banner.png" alt="banner contendo a logo da escola de filosofia Eros"/>
+		</header>
+		<nav>
+			<a class="a-menu" href="index.html">Home</a>
+			<a class="a-menu" href="index.html#pag-cursos">Cursos</a>
+			<a class="a-menu" href="index.html#pag-modalidades">Modalidades</a>
+			<a class="a-menu" href="index.html#pag-aulas">Aulas</a>
+			<a class="a-menu" href="#">Matrícula</a>
+		</nav>
+
+		<section id="pag-matricula">
+			<h1> Matrícula </h1>
+			<p> Matricule-se em nossos cursos </p>
+				
+			<form name="" method="" action="">
+			<label for="nome">Nome:</label>
+			<input id="nome" type="text" name="nome"  placeholder="Digite seu nome completo" required /> <br>
+
+			<label for="email">Email:</label>
+			<input id="email" type="email" name="email"  placeholder="nomedeusuario@email.com"/>
+
+			<label for="senha">Senha</label>
+			<input id="senha"  type="password" name="senha" placeholder="Somente números"/>
+
+			<label for="celular">Celular:</label>
+			<input  id="celular" type="tel" name="celular" placeholder="(99) 99999-9999" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$">
+
+			<div id="data-hora-num">
+				<div>
+					<label for="data">Data:</label>
+					<input id="data" type="date" name="data"/>
+				</div>
+				<div>
+					<label for="hora">Hora:</label><br>
+					<input id="hora" type="time" name="hora"/>
+				</div>
+				<div>
+					<label for="aulas">Aulas</label>
+					<input id="aulas" type="number" name="aulas" min="1" max="10" step="1" />
+				</div>	
+			</div>
+
+			<label for="nivel">Nível:</label>
+				<select id="nivel" name="nivel">
+					<option value="Selecione">Selecione</option>
+					<option value="iniciante">Iniciante</option>
+					<option value="basico">Básico</option>
+					<option value="intermediario">Intermediário</option>
+					<option value="avancado">Avançado</option>
+				</select>
+
+			<fieldset>
+				<legend>Gênero</legend>
+				<input id="masculino" type="radio" name="genero" value="masculino"/> <label for="masculino">Masculino</label><br/>
+				<input id="feminino" type="radio" name="genero" value="feminino"/> <label for="feminino">Feminino</label>
+			</fieldset>
+				
+			<fieldset>
+				<legend>Cursos</legend>
+				<input id="estetica" type="checkbox" name="curso" value="estetica"/> <label for="estetica">Estética</label><br/>
+				<input id="existencialismo" type="checkbox" name="curso" value="existencialismo"/> <label for="existencialismo">Existencialismo</label><br/>
+				<input id="filgrega" type="checkbox" name="curso" value="filosofia grega"/> <label for="filgrega">Filosofia grega</label><br>
+			</fieldset>
+
+			<label for="msg">Mensagem:</label><br>
+				<textarea id="msg" cols="54" rows="4">
+				</textarea>
+			
+			<div id="botoes-form">
+				<input type="submit" name="btn-matricular" value="MATRICULAR-SE"/>
+				<input type="reset" name="btn-cancelar" value="CENCELAR">
+			</div>
+			</form>
+		</section>	
+
+		<footer>
+			<p>Desenvolvido por <a href="https://www.instagram.com/rootsmiliana/?hl=pt-br" target="_blank">Rute Miliana</a> - 2020</p>
+		</footer>
+
+		
+	</body>
+</html>
+
+<!--
+PROPRIEDADE DE FORMULARIO
+label e input= são vinculados
+value = dá valor (nome)
+placeholder = texto que aparecerá antes de clicar na ceixa
+type="submit"   submete as informações coletadas a algo
+required   torna o preenchimento do campo obrigatório
+autofocus primeiro campo a ser digitado, abre a tela com a caixa pronta para ser digitada, sem precisar clicar
+type="password"  oculta os caracteres
+pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$"    ddd (2 digitos)+ 5 digitos- + 4 digitos  . Existem outros formatos de pattern, dá pra alterar os números, etc Obs.: o pattern faz a validação e cria regras
+ type="radio" só pode selecionar um
+ <fieldset> envolve elementos
+type="radio"   é nessario usar o value
+
+ -->

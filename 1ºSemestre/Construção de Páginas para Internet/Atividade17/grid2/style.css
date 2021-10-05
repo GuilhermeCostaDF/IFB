@@ -1,0 +1,36 @@
+*{
+	margin: 0; padding: 0;
+}
+
+body{
+
+}
+section{
+	display: grid;
+	grid-template-columns: 1.2fr 3fr 0.8fr;
+	grid-template-rows: 25vh 70vh 5vh;
+	grid-template-areas: "c c c"
+						 "m p a"
+						 "r r r"
+	
+}
+header{
+	background-color: #373E40;
+	grid-area: c;
+}
+nav{
+	background-color: #305252;
+	grid-area: m;
+}
+main{
+	background-color: #B7D5D4;
+	grid-area: p;
+}
+aside{
+	background-color: #488286;
+	grid-area: a;
+}
+footer{
+	background-color: #373E40;
+	grid-area: r;
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Gavino Futebol Clube</title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Guilherme Costa"/>
+		<meta name="keywords" content="Futebol, Futsal, Gavino, Amador" />
+		<meta name="description" content="Site oficial do time amador de futsal Gavino Futebol Clube" />
+	</head>
+	<body link="#692121" alink="#692121" vlink="#692121">
+		<img src="img/bannerv1.png" alt="Banner com a logo do time Gavino com uma quadra de futsal ao fundo em preto e branco" width="100%" height="" />
+		<center>
+			<font face="Roboto Black" size="4">
+				<a href="index.html">Home</a>
+				<a href="index.html#pag-titulos">Títulos</a>
+				<a href="loja.html">Loja</a>
+				<a href="index.html#pag-videos">Vídeos</a>
+				<a href="contato.html">Contato</a>
+			</font>
+		</center>
+		<hr />
+		<font face="Poller One" size="4" color="#F6B403">
+			<h1 align="center">Gavino Futebol Clube</h1>
+		</font>
+		<font face="Roboto Black">
+			<p align="center">Vencer não é importante, é a única coisa que conta!</p>
+		</font>
+		<br />
+		<hr />
+		<font face="Roboto " size="3" color="#787374">
+			<p align="center"><strong> Entre em contato e marque um jogo contra o nosso time! </strong>:) </p>
+
+<!-- INICIO DO FORMULARIO -->
+
+		<form name="" method="" action="">
+			<label for="nome">Nome:</label><br />
+			<input id="nome" type="text" name="nome_completo" size="50" placeholder="Digite seu nome completo" required="true" autofocus="true"><br />
+
+			<label for="email">E-mail:</label><br />
+			<input id="email" type="email" name="email" size="50" placeholder="seuemail@exemplo.com" required="true"><br />
+
+			<label for="senha">Senha:</label><br />
+			<input id="senha" type="password" name="senha" size="50" placeholder="**********" required="true"><br />
+
+			<label for="celular">Celular:</label><br />
+			<input id="celular" type="tel" name="celular" size="50" placeholder="(99)99999-9999" pattern=“^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$”><br />
+
+			<label for="data">Data:</label><br />
+			<input id="data" type="date" name="data" size="50" placeholder="dd/mm/aaaa"><br />
+
+			<label for="hora">Hora:</label><br />
+			<input id="hora" type="time" name="hora" size="50" placeholder=""><br />
+
+			<label for="tempos"></label>Tempos<br />
+			<input id="tempos" type="number" name="tempos" size="25" placeholder="Deseja jogar quantos tempos?" min="1" max="3" step="1"><br />
+			<label for="minutos"></label>Minutos<br />
+			<input id="minutos" type="number" name="minutos" size="25" placeholder="Quantos minutos cada tempo?" min="15" max="30" step="1" ><br />
+
+			<label for="modalidade">Modalidade</label><br />
+		<select id="modalidade" name="modalidade">
+			<option value="">Selecione</option>
+			<option value="society">Futebol Society</option>
+			<option value="futsal">Futsal</option>
+		</select><br/><br />
+
+
+		<fieldset>
+			<legend>Jogo de ida e volta?</legend>
+			<input id="sim" type="radio" name="revanche" value="revanche" ><label for="sim">Sim</label><br />
+			<input id="nao" type="radio" name="revanche" value="revanche" ><label for="nao">Não</label><br />
+		</fieldset>
+
+
+		<fieldset>
+			<legend>Provável local da partida (Selecione mais de uma opção)</legend>
+			<input id="aguasclaras" type="checkbox" name="localpartida" value="localpartida" ><label for="aguasclaras">Águas Claras</label><br />
+			<input id="ceilandia" type="checkbox" name="localpartida" value="localpartida" ><label for="ceilandia">Ceilândia</label><br />
+			<input id="cruzeiro" type="checkbox" name="revanche" value="localpartida" ><label for="cruzeiro">Cruzeiro</label><br />
+			<input id="guara" type="checkbox" name="revanche" value="localpartida" ><label for="guara">Guará</label><br />
+			<input id="parkway" type="checkbox" name="localpartida" value="localpartida" ><label for="parkway">Park Way (AC) </label><br />			
+			<input id="samambaia" type="checkbox" name="revanche" value="localpartida" ><label for="samambaia">Samambaia</label><br />
+			
+		</fieldset>
+
+		<label for="obs">Observações para a partida</label><br />
+		<textarea id="obs" cols="50" rows="5" placeholder="Escreva alguma observação pertinente a partida. Obrigado!"></textarea>
+
+
+			<p><input type="submit" name="btn-contato"  />
+			   <input type="reset" name="btn-cancelar" value="Cancelar" /></p>
+
+		</form>
+		<br />
+
+<!-- FIM DO FORMULARIO -->
+
+		<hr />
+		<p align="center">Desenvolvido por <a href="http://instagram.com/chileninhow" target="_blank"><strong>Guilherme Costa</strong></a> - 2020 </p>
+
+		</font>
+		
+
+	</body>
+</html>

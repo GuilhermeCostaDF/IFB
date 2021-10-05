@@ -1,0 +1,214 @@
+*{margin:0; padding:0;}
+
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&display=swap');
+
+
+/* font-family: 'Katibeh', cursive; */
+
+nav{
+	width: 100%;
+	height: 50px;
+	background-color: #000;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.a-menu{
+	text-align: right;
+	font: 1rem 'Katibeh', cursive;
+	color: #fff;
+	text-decoration: none;
+	margin-right: 30px;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.a-menu:hover, .a-menu:active{
+	color: #FFCC00;
+}
+
+header{
+	width: 100%;
+	height: 400px;
+}
+
+header img{
+	width: 100%;
+	height: 400px;
+}
+
+article{
+	width: 100%;
+	height: 350px;
+	background-color: #ededed;
+}
+
+article h1{
+	font: 2.2rem 'Pacifico', cursive;
+	padding: 10px;
+}
+
+article h2{
+	text-align: justify;
+	padding: 10px;
+	font: 1.5rem 'Katibeh', cursive;
+	margin-bottom: 30px;
+}
+
+article p{
+	text-align: justify;
+	padding: 10px;
+	font: 1.2rem 'Ubuntu', sans-serif;
+}
+
+section{
+
+}
+
+#pag-prod{
+	width: 100%;
+	height: 650px;
+}
+
+#cards-container{
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card{
+	background-color: #fff;
+	margin: 10px;
+	width: 25%;
+	border-radius: 10px;
+	box-shadow: 0px 5px 4px #CCC;
+}
+
+.card:hover{
+	box-shadow: 0px 5px 2px #000;
+	cursor: pointer;
+}
+
+.img-cards{
+	width: 100%;
+	height: auto;
+}
+#pag-prod h1{
+	font: 2.2rem 'Pacifico', cursive;
+	padding: 10px;	
+}
+
+.card-content{
+	padding: 15px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.card-content p{
+	font: 1rem 'Katibeh', cursive; 
+}
+
+h3{
+	font: 1rem 'Katibeh', cursive;
+	font-weight: bold;
+}
+
+#pag-enc{
+	background-color: #ededed;
+	width:100%;
+	height: 700px;
+}
+
+#pag-enc h1{
+	font: 2.2rem 'Pacifico', cursive;
+	padding: 10px;
+}
+
+form{
+	padding: 30px;
+	width: 500px;
+	margin: auto;
+	
+}
+
+input, select, textarea{
+	width: 100%;
+	height: 25px;
+	margin-bottom: 15px;
+	padding-left: 5px;
+	box-sizing: border-box;
+	border: 1px solid #C4C4C4;
+	font: 1rem 'Ubuntu', sans-serif;
+}
+
+label,fieldset{
+	font: 1rem 'Ubuntu', sans-serif;
+	font-weight: bold;
+}
+
+fieldset{
+	border:2px solid #ccc;
+	margin-bottom: 15px;
+	padding: 10px;
+	background-color: #fff;
+}
+
+fieldset label{
+	margin-left: 5px; 
+}
+
+input[type="radio"]{
+	width: 15px;
+	height: 15px;
+	margin-left: 50px;
+}
+
+textarea{
+	height: 80px;	
+}
+
+#botoes-form{
+	display: flex;
+	justify-content: center;
+}
+
+input[type="submit"],input[type="reset"]{
+	margin: 20px;
+	width: 120px;
+	height: 40px;
+	color: white;
+	border:0px;
+	border-radius: 5px;
+	cursor: pointer;
+	font: 1.1rem 'Katibeh', cursive;
+}
+
+input[type="submit"]{
+	background-color: #FFCC00;
+}
+
+input[type="reset"]{
+	background-color: #ff2424;
+}
+
+
+
+footer{
+	background-color: #000;
+	width: 100%;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+footer p{
+	color: #fff;
+	font: 1rem 'Katibeh', cursive;
+	padding: 5px;
+}
+
+footer a{
+	text-decoration: none;
+	color: #FFCC00;
+}

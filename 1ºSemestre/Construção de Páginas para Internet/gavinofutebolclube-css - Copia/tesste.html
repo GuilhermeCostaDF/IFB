@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script>
+	var comprimentoPista, numTotalVoltas, qtdAbastecimentos, consumo;
+	var reabastecimento, voltasParada;
+
+	comprimentoPista=parseInt(prompt("Qual o compimento da pista(metros)?:"));
+	numTotalVoltas=parseInt(prompt("Quantas voltas serão percorridas?:"));	
+	qtdAbastecimento=parseInt(prompt("Número de reabastecimentos desejados:"));
+	consumo=parseInt(prompt("Qual o consumo de combustibel(km/L)?:"));
+
+
+	voltasParada= numTotalVoltas / qtdAbastecimentos
+	reabastecimento= voltasParada * comprimentoPista
+	console.log("Total de combustivel ate o 1º reabastecimento"+ reabastecimento +" Litros")
+
+</script>
+</html>

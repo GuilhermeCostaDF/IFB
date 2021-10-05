@@ -1,0 +1,203 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
+nav{
+	background-color: black;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	position: sticky;
+	top:0;
+	z-index: 1;	
+}
+#container-logo{
+	width: 50%;
+	box-sizing: border-box;
+	display: flex;
+}
+#container-logo h1{
+	color: white;
+	font-size: 2rem;
+	font-family: 'Black Ops One', cursive;
+	margin:10px;
+	margin-left: 20px;
+	transform: rotate(0);
+}
+
+ul{
+	justify-content: flex-end;
+	margin: 20px;
+	width: 50%;
+	display: flex;
+	height: 100%;
+}
+li{
+	list-style: none;
+	color: white;
+	margin-right: 20px;
+	font-size: 1rem;
+	font-family: 'Black Ops One', cursive; 
+}
+
+li a{
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+}
+
+li a:hover {
+	color: orange;
+}
+
+header{
+	background-color: orange;
+	width: 100%;
+	height: 565px;
+}
+
+header img{
+	width: 100%;
+	height: 565px;
+
+}
+
+main{
+	width: 100%;
+	height: auto;
+}
+#container-sobre{
+	background-color: black;
+	display: flex;
+	width: 100%;
+	height: 400px;
+}
+
+#coluna-esquerda-sobre{
+	background-color: black;
+	width: 50%;
+	height: 400px;
+}
+
+h1{
+	text-align: center;
+	margin-top: 140px;
+	font-size: 4rem;
+	font-family: 'Black Ops One', cursive;
+	color:#ff142b;
+	transform: rotate(-20deg);
+}
+#coluna-direita-sobre{
+	background-color: black;
+	width: 50%;
+	height: 400px;
+}
+#coluna-direita-sobre p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1rem;
+	color: white;
+	text-align: justify;
+	margin-right: 50px;
+	margin-left: 10px;
+	margin-top: 100px;
+	line-height: 30px;
+	
+}
+
+
+#container-titulos{
+	background-color: black;
+	display: flex;
+	width: 100%;
+	height: 600px;
+}
+
+#coluna-esquerda-titulos{
+	background-color: #f54a00;
+	width: 50%;
+	height: 600px;
+}
+
+#coluna-esquerda-titulos h1{
+	color:white;
+	margin-top: 280px;
+}
+#coluna-direita-titulos{
+	background-color: #f54a00;
+	width: 50%;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;	
+}
+
+.box-titulo{
+	width: 70%;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	padding: 10px;
+	align-items: center;
+	justify-content: flex-start; 
+	display: flex;
+}
+.box-titulo img{
+	width: 140px;
+	height: 140px;
+
+}
+.box-titulo p{
+	color:white;
+	text-align: left;
+	font-size: 1.3rem;
+	font-family: 'Anton', sans-serif;
+}
+
+#container-loja{
+	display: flex;
+	width: 100%;
+	height: 600px;
+}
+
+#coluna-esquerda-loja{
+	background-color: white;
+	width: 40%;
+	height: 600px;
+}
+#coluna-esquerda-loja h1{
+	color:#f54a00;	
+}
+#coluna-direita-loja{
+	background-color: orange;
+	width: 60%;
+	height: 400px;
+}
+
+#container-video{
+	display: flex;
+	width: 100%;
+	height: 400px;
+}
+
+#coluna-esquerda-video{
+	background-color: orange;
+	width: 50%;
+	height: 400px;
+}
+#coluna-esquerda-video h1{
+	color:black;	
+}
+#coluna-direita-video{
+	background-color: orange;
+	width: 50%;
+	height: 400px;
+}
+
+footer{
+	width: 100%;
+	height: 200px;
+	background-color: black;
+}

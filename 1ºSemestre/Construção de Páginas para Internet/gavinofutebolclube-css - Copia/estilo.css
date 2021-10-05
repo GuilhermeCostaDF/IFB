@@ -1,0 +1,348 @@
+/* seletor{propriedade:valor;} */
+
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&family=Roboto:wght@100;900&display=swap&family=Josefin+Sans&display=swap');
+
+*{margin:0; padding:0;}
+
+
+body{
+	background-color: #e8e8e8;
+	max-width: 1400px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
+
+
+
+header{
+	width: 100%;
+	height: 400px;
+
+}
+
+
+img{
+	width: 100%;
+	height: 400px;
+	
+}
+
+.camisas{
+	width: 250px;
+	height: 250px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+nav{
+	background-color:#000;
+	text-align: center;
+	padding: 20px;
+
+	
+}
+
+.a-menu{
+	text-align: center;
+	font: 1.6rem 'Roboto Black', sans-serif;
+	color: #fff;
+	text-decoration: none;
+	margin-right: 50px;
+	font-weight: bold;
+}
+
+.a-menu:hover, .a-menu:active{
+	color: #FFA000;
+}
+
+article{
+	width: 100%;
+	background-color: #000; 
+	padding: 60px;
+	box-sizing: border-box;
+}
+
+
+article p{
+	color:#fff;
+	font: 1.2rem 'Josefin Sans', sans-serif;
+	line-height: 25px;
+	text-align: justify;
+}
+
+#desenvolvimentovideos{
+	text-align: center;
+	padding: 60px;
+}
+
+
+
+h1{
+	font: 3rem 'Poller One', cursive ;
+	color: #FFA000;
+	text-align: center;
+	margin-top: 8px;
+	margin-bottom: 50px;
+}
+
+h3{
+	font: 1rem 'Roboto', sans-serif;
+	text-align: center;
+	margin-bottom: 50px;
+	color:#fff;
+}
+
+h2{	 
+	font-family: 'Roboto Black', sans-serif;
+	font-size: 1.2rem;
+	margin-bottom: 30px;
+}
+
+p{
+	font: 1rem 'Roboto', sans-serif ;
+	color: #000;
+	text-align: justify;
+	
+}
+
+
+
+section{
+	padding:20px;
+}
+
+#pag-titulos{
+	background-color: #FFA000;
+	padding: 20px;
+	box-sizing: border-box;
+	
+}
+
+#pag-titulos h2{
+	margin-bottom: 20px;
+}
+
+ul{
+	margin-left: 120px;
+	padding: 20px;
+}
+
+li{
+	font: 1.2rem 'Roboto Black', sans-serif;
+	margin-bottom: 10px;
+}
+
+#pag-loja{
+	background-color: #212121;
+}
+
+#pag-loja p{
+	font: 1.2rem 'Josefin Sans', sans-serif;
+	color:#FFF;
+	margin-bottom: 20px;
+}
+
+#container{
+	display: flex;	
+	margin-bottom: 10px;
+}
+
+#container p{
+	font: 1.2rem 'Josefin Sans', sans-serif;
+	color:#000;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.card{
+	background-color: #f0f0f0;
+	margin:15px;
+	width: 25%;
+	height: auto;
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 5px 10px 8px #CCC;
+	padding: 10px;
+
+
+}
+
+.card:hover{
+	box-shadow: 5px 10px 8px #FFA000; 
+}
+
+.card-content{
+	padding:10px;
+}
+
+.card-title{
+	font: 1.5rem 'Josefin Sans', sans-serif;
+	color: #000;	
+	text-align: center;
+	margin-top: 15px;
+}
+
+#pag-loja h2{
+	color:#FFA000;
+}
+
+
+#pag-videos{
+	background-color: #FFA000;	
+}
+
+#pag-videos p{
+	font: 1.5rem 'Josefin Sans', sans-serif;
+	color: #000;	
+	text-align: justify;
+	margin-top: 15px;
+}
+
+#container-videos{
+	display: flex;
+	box-sizing: border-box;
+}
+
+.coluna-videos{
+	box-sizing: border-box;
+	padding: 20px;
+	display: flex;
+	
+}
+
+#coluna1{
+	padding: 20px;
+}
+
+#coluna2{
+	box-sizing: border-box;
+	padding: 20px;
+}
+
+#redes{
+	display: flex;
+	margin-top: 60px;
+	justify-content: center;
+	display: flex;
+	padding: 20px;
+}
+
+#redes a{
+	text-decoration: none;
+	margin-right:20px;
+}
+
+#redes p{
+	font-size: 1.5rem;
+	color: #fff;
+}
+	
+
+.img-icon{
+	margin-top: 12px;
+	margin-right: 10px;
+	width: 30px;
+	height: 30px;
+}
+
+video{
+	width: 500px;
+}
+
+
+footer{
+	width: 100%;
+	background-color: #000; 
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+footer p{
+	text-align: center;
+	color:#fff;
+	font: 1.2rem 'Josefin Sans', sans-serif;
+}
+
+footer a{
+	font: 1.2rem 'Josefin Sans', sans-serif;
+	color: #FFA000;	
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+/*PÁGINA AGENDAMENTOS*/
+
+
+#pag-contato{
+	background-color: #f0f0f0;
+}
+
+#pag-contato p{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+form{
+	width: 400px;
+	margin:0 auto;
+}
+
+input, select, textarea{
+	width: 100%;
+	height: 30px;
+	margin-bottom: 10px;
+	padding-left: 5px;
+	box-sizing: border-box;
+	border: 1px solid #C4C4C4;
+	color:#777;
+}
+
+label, fieldset, input, select, textarea{
+	font: 1.2rem 'Josefin Sans', sans-serif;
+}
+
+fieldset{
+	border: 1px solid #C4C4C4;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+#data-hora{
+	display: flex;
+}
+
+input[type="radio"], input[type="checkbox"]{
+	width:15px;
+	height: 15px;
+	margin-left: 50px;
+}
+
+#cidades fieldset{
+	display: grid;
+}
+
+#cidades label{
+	margin-left: 5px;
+}
+
+textarea{
+	height: 80px;
+}
+
+#botoes{
+	display: flex;
+}
+
+input[type="submit"], input[type="reset"]{
+	margin:28px;
+	background-color: #FFA000;
+	color: #fff; 
+	border: 0;
+	border-radius: 5px;
+}
+
+ input[type="reset"]{
+ 	background-color: #e05353;
+ }

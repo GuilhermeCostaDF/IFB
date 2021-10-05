@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Gavino Futebol Clube</title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Guilherme Costa"/>
+		<meta name="keywords" content="Futebol, Futsal, Gavino, Amador" />
+		<meta name="description" content="Site oficial do time amador de futsal Gavino Futebol Clube" />
+		<link rel="stylesheet" type="text/css" href="estilo.css" />
+		
+	</head>
+	<body>
+		<header>
+			<img src="img/bannerv1.png" alt="Banner com a logo do time Gavino com uma quadra de futsal ao fundo em preto e branco" />
+		</header>
+			
+		<nav>	
+				<a class="a-menu" href="index.html">Home</a>
+				<a class="a-menu" href="index.html#pag-titulos">Títulos</a>
+				<a class="a-menu" href="loja.html">Loja</a>
+				<a class="a-menu" href="index.html#pag-videos">Vídeos</a>
+				<a class="a-menu" href="contato.html">Contato</a>
+		</nav>
+		
+		
+			<h1>Gavino Futebol Clube</h1>
+		
+		
+			<h3>Vencer não é importante, é a única coisa que conta!</h3>
+		
+		
+		
+			<p><strong> Entre em contato e marque um jogo contra o nosso time! </strong>:) </p>
+
+<!-- INICIO DO FORMULARIO -->
+
+		<form name="" method="" action="">
+			<label for="nome">Nome:</label>
+			<input id="nome" type="text" name="nome_completo"  placeholder="Digite seu nome completo" required="true" autofocus="true">
+
+			<label for="email">E-mail:</label>
+			<input id="email" type="email" name="email" placeholder="seuemail@exemplo.com" required="true">
+
+			<label for="senha">Senha:</label>
+			<input id="senha" type="password" name="senha"  placeholder="**********" required="true">
+
+			<label for="celular">Celular:</label>
+			<input id="celular" type="tel" name="celular"  placeholder="(99)99999-9999" pattern=“^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$”>
+
+			<label for="data">Data:</label>
+			<input id="data" type="date" name="data"  placeholder="dd/mm/aaaa">
+
+			<label for="hora">Hora:</label>
+			<input id="hora" type="time" name="hora"  placeholder="">
+
+			<label for="tempos"></label>Tempos
+			<input id="tempos" type="number" name="tempos"  placeholder="Deseja jogar quantos tempos?" min="1" max="3" step="1">
+			<label for="minutos"></label>Minutos
+			<input id="minutos" type="number" name="minutos" placeholder="Quantos minutos cada tempo?" min="15" max="30" step="1" >
+
+			<label for="modalidade">Modalidade</label>
+		<select id="modalidade" name="modalidade">
+			<option value="">Selecione</option>
+			<option value="society">Futebol Society</option>
+			<option value="futsal">Futsal</option>
+		</select><br/>
+
+
+		<fieldset>
+			<legend>Jogo de ida e volta?</legend>
+			<input id="sim" type="radio" name="revanche" value="revanche" ><label for="sim">Sim</label>
+			<input id="nao" type="radio" name="revanche" value="revanche" ><label for="nao">Não</label>
+		</fieldset>
+
+
+		<fieldset>
+			<legend>Provável local da partida (Selecione mais de uma opção)</legend>
+			<input id="aguasclaras" type="checkbox" name="localpartida" value="localpartida" ><label for="aguasclaras">Águas Claras</label>
+			<input id="ceilandia" type="checkbox" name="localpartida" value="localpartida" ><label for="ceilandia">Ceilândia</label>
+			<input id="cruzeiro" type="checkbox" name="revanche" value="localpartida" ><label for="cruzeiro">Cruzeiro</label>
+			<input id="guara" type="checkbox" name="revanche" value="localpartida" ><label for="guara">Guará</label>
+			<input id="parkway" type="checkbox" name="localpartida" value="localpartida" ><label for="parkway">Park Way (AC) </label>	
+			<input id="samambaia" type="checkbox" name="revanche" value="localpartida" ><label for="samambaia">Samambaia</label>
+			
+		</fieldset>
+
+		<label for="obs">Observações para a partida</label>
+		<textarea id="obs" cols="50" rows="5" placeholder="Escreva alguma observação pertinente a partida. Obrigado!"></textarea>
+
+
+			<p><input type="submit" name="btn-contato"  />
+			   <input type="reset" name="btn-cancelar" value="Cancelar" /></p>
+
+		</form>
+		
+
+<!-- FIM DO FORMULARIO -->
+
+	<footer>	
+		
+		<p>Desenvolvido por <a href="http://instagram.com/chileninhow" target="_blank"><strong>Guilherme Costa</strong></a> - 2020 </p>
+
+	</footer>		
+
+	</body>
+</html>
