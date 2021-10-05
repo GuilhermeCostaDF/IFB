@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 396</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        var nomesI= new Array(100), nomeProg= new Array(100);
+        var vetsI= new Array(100), vetProg= new Array(100),  J, C;
+
+
+
+        confirm("Entre com os dados dos alunos de Programação 1");
+        for(i=0;i<=99;i++){
+            nomeProg[i]= window.prompt(`${i+1}º Nome:`);
+            vetProg[i]= parseInt(window.prompt(`Matrícula:`));
+        }
+
+        confirm("Entre com os dados dos alunos de Sistemas de Informação");
+        for(i=0;i<=99;i++){
+            nomesI[i]= window.prompt(`${i+1}º Nome:`);
+            vetsI[i]= parseInt(window.prompt(`Matrícula:`));
+        }
+
+        var OP = parseInt(window.prompt("Lista \n\n1- LISTA TODOS DE PROGRAMAÇÃO \n2- LISTA DE TODOS DE SISTEMAS DE INFORMAÇÃO \n3- LISTA DE TODOS QUE FAZEM AS DUAS \n4-SAIR \n\nOPÇÃO:"));
+        do{
+            switch(OP){
+                case 1:
+                    document.write(`Relação com os alunos de Programação: </br></br>`);
+                    for(i=0; i<=99;i++){
+                        document.write(`<strong>Nome:</strong> ${nomeProg[i]} <strong>Matrícula:</strong> ${vetProg[i]}</br>`);
+                    }
+                    break;   
+                case 2:
+                    document.write(`Relação com os alunos de Sistemas de Informação: </br></br>`); 
+                    for(i=0; i<=99;i++){
+                        document.write(`<strong>Nome:</strong> ${nomesI[i]} <strong>Matrícula:</strong> ${vetsI[i]}</br>`);
+                    }
+                    break;
+                case 3:
+                    document.write(`Relação com os alunos que cursam os dois: </br></br>`); 
+                    for(i=0; i<=99;i++){
+                        J=0;
+                        while(J<1){
+                            if( vetProg[i] == vetsI[J]){
+                                document.write(`<strong>Nome:</strong> ${nomesI[i]} <strong>Matrícula:</strong> ${vetsI[i]}</br>`);
+                            }
+                            J++;
+                        }
+                    }
+                    break;
+                case 4:
+                    alert("FECHANDO");
+                    break;
+                default:
+                    alert("OPÇÃO INVÁLIDA");
+                    break;
+            }
+            OP = parseInt(window.prompt("Lista \n\n1- LISTA TODOS DE PROGRAMAÇÃO \n2- LISTA DE TODOS DE SISTEMAS DE INFORMAÇÃO \n3- LISTA DE TODOS QUE FAZEM AS DUAS \n4-SAIR \n\nOPÇÃO:"));
+        }while(OP!=4)
+        
+    </script>
+</body>
+</html>

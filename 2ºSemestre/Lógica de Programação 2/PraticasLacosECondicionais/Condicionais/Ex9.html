@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 98</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // A prefeitura do Rio de Janeiro abriu uma linha de crédito para os funcionários estatutários. 
+        // O valor máximo da prestação não poderá ultrapassar 30% do salário bruto
+        // Fazer um algoritmo que permita entrar com o salário bruto e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
+        
+        var salario = Number(window.prompt("Valor do salário bruto:"));
+        var prestacao = Number(window.prompt("Valor da prestação"));
+        var valorMax = salario * 0.30;
+        
+        if(prestacao <= valorMax)
+            console.log("EMPRÉSTIMO CONCEDIDO")
+        else
+            console.log("EMPRESTIMO NÃO AUTORIZADO!\nSUA PRESTAÇÃO ULTRAPASSOU 30% DO SALÁRIO BRUTO")
+
+        
+
+        console.log(valorMax);
+       
+    </script>
+</body>
+</html>

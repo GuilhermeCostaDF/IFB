@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<style type="text/css">
+
+body{
+    
+    font: normal 15pt Arial;
+}
+
+header{
+    text-align: center;
+    color: rgb(221, 221, 221);
+}
+
+#date{
+    background-color: rgb(94, 94, 94);
+    width: 200px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#dateText{
+    color: rgb(212, 212, 212);
+    line-height: 150%;
+}
+
+section{
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    padding: 10px;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgb(54, 54, 54);
+
+}
+
+footer {
+    color: rgb(97, 255, 145);
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 10pt;
+
+}
+table p{
+    font-size: 16px;
+}
+table{
+    width: 100%;
+    border-collapse:collapse;
+    
+}
+
+td{
+    padding: 8px
+}
+
+input{
+    width: 100px;
+    display: block;
+    margin: auto;
+}
+
+button{
+    padding: 10px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+#fimTabela{
+    border-bottom: 2px solid rgb(44, 44, 44);
+    margin-bottom: 10px;
+}
+
+.total{
+    padding-top: 20px;
+}
+
+</style>
+<body style="background-color: #2e3344;">
+    <header>  
+        <h1>Atividade 2</h1> 
+    </header>
+    <section>
+        <div>
+            <div id="res">
+                <h2>Tabela da Preços</h2>
+                <table> 
+                    <tr>
+                        <th>Produto</th>
+                        <th>Preço</th>
+                        <th>Quantidade</th>
+                        <th>Total</th>
+                    </tr>
+                    <tr>
+                        <td><p>Caneta Bic</p></td>
+                        <td><input type="text" name="precoBic" id="precoBicTxt" value="0.20"></td>
+                        <td><input type="text" name="quantidadeBic" id="quantidadeBicTxt" ></td>
+                        <td><input type="text" name="totalBic" id="totalBicTxt"></td>
+                    </tr>
+                    <tr id="fimTabela">
+                        <td><p>Cola Polar</p></td>
+                        <td><input type="text" name="precoPolar" id="precoPolarTxt" value="1.50"></td>
+                        <td><input type="text" name="quantidadePolar" id="quantidadePolarTxt"></td>
+                        <td><input type="text" name="totalPolar" id="totalPolarTxt"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <th class="total">Total:</th>
+                        <td class="total"><input type="text" value="" id="precoTotal"></td>
+                    </tr>
+                </table>
+                <button id="enviarSoma" onclick="executaSoma()">Enviar</button>
+                </div>
+            </div>    
+        </div>
+                
+    </section>
+    <footer>
+        Developed by Guilherme Costa - 2021  
+    </footer>
+
+
+    <script type="text/javascript">
+
+        function executaSoma(){
+            
+            let precoBic = Number(document.getElementsByTagName("input")[0].value);
+            let quantidadeBic = Number(document.getElementsByTagName("input")[1].value);
+            let totalBic = document.getElementsByTagName("input")[2];
+
+            let precoPolar = Number(document.getElementsByTagName("input")[3].value);
+            let quantidadePolar = Number(document.getElementsByTagName("input")[4].value);
+            let totalPolar = document.getElementsByTagName("input")[5];
+            
+            let total = document.getElementsByTagName("input")[6];
+
+            totalBic.value= (precoBic * quantidadeBic).toFixed(2);
+            totalPolar.value = (precoPolar * quantidadePolar).toFixed(2);
+
+            let resultado = parseFloat(totalBic.value) + parseFloat(totalPolar.value);
+
+            total.value=resultado;       
+            
+        }
+        
+    </script>    
+</body>
+</html>

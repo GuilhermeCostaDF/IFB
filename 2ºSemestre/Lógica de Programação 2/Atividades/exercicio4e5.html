@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<META charset="UTF-8">
+	<title>Exercícios 4/5</title>
+</head>
+<style type="text/css">
+	input{
+		display: block;
+		margin: 10px auto 10px auto;
+	}
+	.button{
+		padding: 10px;
+		width: 120px;
+		height: 50px;
+		background-color: #823cfa;
+		color: white;
+		border:none;
+		cursor: pointer;
+	}
+	.button:hover{
+		background-color: #6812fc;
+	}
+	p{
+		font-size: 20px;
+	}
+	fieldset{
+		width: 720px;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+	}
+</style>
+
+<body>
+	<h1>Primeiro Exemplo de Javascript</h1>
+	<h2>Usando os tipos de dados para calcular potências de base 2</h2>
+	<script language="Javascript">
+				var texto = ' elevado a ';
+	
+		for(base=1; base<=20; base++)
+		{
+			document.write("<h3>Potência de base "+base+ "</h3>");
+			
+			for(i=1, pot=base; i<=10 ; i++ , pot*=base)
+			{
+				document.write(base + texto + i + " = " + pot);
+				document.write("<br>");	
+			}
+			
+			document.write("<br><br>");
+		}
+
+		document.write("<br><h2>Tipos especiais: </h2>");
+		document.write("2 dividido por 0 = "+ 2/0); //Infinity
+		document.write('<br>');
+		document.write("-2 dividido por " + 0 + ' = ' + -2/0); //-Infinity  
+		document.write('<br>');
+		document.write("0 dividido por " + 0 + ' = ' + 0/0); //NaN
+	</script>
+
+	<form>
+		<input type="button" class="button" value="Aperte aqui" onClick="alert('clicaram-me!!!')">
+	</form>
+
+	
+	<fieldset>
+		<p>
+			<strong>Resp 4:</strong> A forma de utilizar o Javascript foi <strong>através da associação a um evento</strong>.
+		</p>
+		<p>
+			<strong>Resp 5:</strong> O que me recordo de portugol, as diferenças são as palavras reservadas, não precisamos especificar o tipo da variável em Javascript e o uso de ";".
+		</p>
+	</fieldset>
+</body>
+</html>

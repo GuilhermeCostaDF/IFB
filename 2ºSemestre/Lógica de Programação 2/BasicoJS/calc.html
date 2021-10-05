@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body{ 
+            text-align: center;
+            background-color: rgb(54, 54, 54);
+        }
+
+        h1{
+            font-size: 40px;
+            color: rgb(13, 216, 138);
+            
+        }
+        h2{
+            color: rgb(54, 54, 54);
+        }
+
+        .main{
+            max-width: 800px;
+            background-color: rgb(63, 63, 63);
+            height: auto;
+            margin: auto auto;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            
+        }
+        .operacao{
+            margin: 5px;
+            width: 380px;
+            height: 250px;
+            background-color:rgb(182, 182, 182);
+        }
+
+        #txtn1, #txtn2,#txtn3, #txtn4,#txtn5, #txtn6,#txtn7, #txtn8{
+            width: 120px;
+        }
+
+        .resultado{
+            box-sizing: border-box;
+            margin-top: 50px;
+            padding: 10px;
+            color: white;
+            font: 700;
+            font-size: 30px;
+            color: rgb(24, 24, 24);
+            width: 100px;
+            height: 100px;
+            margin:20px auto 10px auto;
+            position: relative;
+
+        }
+
+        #resSoma{
+            margin: auto;
+        }
+        #footer{
+            color: rgb(136, 136, 136);
+        }
+        #autor{
+            color:rgb(13, 216, 138);
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <div class="main">
+        <div class="operacao">
+            <h2>Somar</h2>
+            <input type="number" name="txtn1" id="txtn1">
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value="Somar" onclick="somar()">
+            <div class="resultado">
+                <div id="resSoma">
+
+                </div>       
+            </div>
+        </div>
+        <div class="operacao">
+            <h2>Subtrair</h2>
+            <input type="number" name="txtn1" id="txtn3">
+            <input type="number" name="txtn2" id="txtn4">
+            <input type="button" value="Subtrair" onclick="subtrair()">
+            <div class="resultado">
+                <div id="resSub">
+
+                </div>       
+            </div>
+        </div>
+        <div class="operacao">
+            <h2>Multiplicar</h2>
+            <input type="number" name="txtn1" id="txtn5">
+            <input type="number" name="txtn2" id="txtn6">
+            <input type="button" value="Multiplicar" onclick="multiplicar()">
+            <div class="resultado">
+                <div id="resMult">
+
+                </div>          
+            </div>
+        </div>
+        <div class="operacao">
+            <h2>Dividir</h2>
+            <input type="number" name="txtn1" id="txtn7">
+            <input type="number" name="txtn2" id="txtn8">
+            <input type="button" value="Dividir" onclick="dividir()">
+            <div class="resultado">
+                <div id="resDiv">
+
+                </div>
+                
+            </div>
+        </div>
+    </div> 
+    <div id="footer">
+        <p>Desenvolvido por <strong id="autor">Guilherme Costa</strong> - 2021</p>
+    </div>
+    
+    <script> 
+
+        function somar(){
+            var tn1 = document.getElementById('txtn1');
+            var tn2 = document.getElementById('txtn2');
+            var resultado = document.getElementById('resSoma')
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var soma = n1 + n2;
+            resultado.innerHTML = soma
+        }
+
+        function subtrair(){
+            var tn1 = document.getElementById('txtn3');
+            var tn2 = document.getElementById('txtn4');
+            var resultado = document.getElementById('resSub')
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var subtrair = n1 - n2;
+            resultado.innerHTML = subtrair
+        }
+
+        function multiplicar(){
+            var tn1 = document.getElementById('txtn5');
+            var tn2 = document.getElementById('txtn6');
+            var resultado = document.getElementById('resMult')
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var mult = n1 * n2;
+            resultado.innerHTML = mult
+        }
+
+        function dividir(){
+            var tn1 = document.getElementById('txtn7');
+            var tn2 = document.getElementById('txtn8');
+            var resultado = document.getElementById('resDiv')
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var div = n1 / n2;
+            resultado.innerHTML = div.toFixed(4)
+        }
+    
+    </script>
+</body>
+</html>

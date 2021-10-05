@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algoritmo 273 </title>
+</head>
+<body>
+	<script type="text/javascript">
+
+	/*	
+		Uma empresa de fornecimento de energia elétrica faz a leitura mensal dos medidores de consumo. Para cada consumidor, são digitados os seguintes dados:
+		- número do consumidor
+		- quantidade de kWh consumidos durante o mês
+		- tipo (código) do consumidor:
+           1- residencial, preço em reais por kWh = 0,3
+           2- comercial, preço em reais por kWh = 0,5
+           3 - industrial, preço em reais por kWh = 0,7
+
+		Os dados devem ser lidos até que seja encontrado um consumidor com número 0 (zero). Calcular e imprimir:
+		- o custo total para cada consumidor
+		- o total de consumo para os três tipos de consumidor
+		- a média de consumo dos tipos 1 e 2
+	*/
+	
+	var total=0;
+	var numConsumidor =1;
+	var qtd1e2=0;
+	var total1e2=0;
+	
+	var codigo = Number(window.prompt("Tipo (código) do consumidor:\n1- Residencial\n2- Comercial\n3- Industrial\n0- PARA CANCELAR"));
+
+	while(codigo != 0){
+		
+		var custo=0;
+	
+		var qtdKwh = Number(window.prompt("Quantidade de kWh consumidos durante o mês:"));
+
+		total+=qtdKwh;
+
+		if(codigo == 1){
+			custo = qtdKwh * 0.3;
+			qtd1e2++;
+			total1e2+=custo;
+		}
+		else{
+			if(codigo ==2){
+				custo = qtdKwh * 0.5;
+				qtd1e2++;
+				total1e2+=custo;
+			}
+			else{
+				if(codigo ==3){
+					custo = qtdKwh * 0.7;
+				}
+			}
+		}
+
+		console.log(`Custo total do consumidor ${numConsumidor}: ${custo}`)
+		numConsumidor++;
+		var codigo = Number(window.prompt("Tipo (código) do consumidor:\n1- Residencial\n2- Comercial\n3- Industrial\n0- PARA CANCELAR"));
+	}
+
+	console.log(`Total consumido em 1-2-3: ${total}`);
+
+	if( qtd1e2  > 0 ){
+
+		console.log(`Média 1-2: ${total1e2/qtd1e2}`);
+	}
+	else{
+		console.log(`Nenhum consumidor entre 1-2`);
+	}
+	
+	</script>
+</body>
+</html>

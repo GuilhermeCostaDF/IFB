@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Algoritmo 461 (página 400)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		//Algoritmo 461 (página 400) - Criar um algoritmo que possa entrar com três números e, para cada um, imprimir o dobro. Usar duas funções 
+
+		function linha(caractere){
+			let a = caractere;
+			document.write(`<br/>`);
+			for(let cont=1; cont<=15; cont++){
+				document.write(a);
+			}
+			document.write(`<br/><br/>`);
+		}
+
+		function dobro(n1){
+			let a = n1;
+			return  a * 2; 
+		}
+
+		for(let cont=1;cont<=3;cont++){
+			var a = Number(window.prompt("Digite numero:"));
+			linha("*");
+			document.write(`Número digitado: ${a} <br/> dobro: ${dobro(a)} <br/>`);
+		}
+
+		linha("*")
+
+	</script>
+</body>
+</html>

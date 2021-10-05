@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 351</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var nomes=[];
+
+        for(var i=0;i<=4;i++){
+            nomes[i]= window.prompt(`Nome ${i+1}:`);
+        }
+
+        var num= Number(window.prompt("Digite um número:"));
+        while(num < 1 || num > 5){
+            alert('Número fora do intervalo');
+            num= Number(window.prompt("Digite um número:"));
+        }
+        
+        document.write(`Número digitado: ${num} <br/><br/>`);
+        document.write(`<strong>${nomes[num-1]}</strong>`);
+        
+    </script>
+</body>
+</html>

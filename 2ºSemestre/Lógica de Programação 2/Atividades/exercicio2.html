@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<META charset="UTF-8">
+	<title>Exercício 2</title>
+</head>
+<body>
+	<h1>Primeiro Exemplo de Javascript</h1>
+	<h2>Usando os tipos de dados para calcular potências de base 2</h2>
+	<br>
+	<script language="Javascript">
+		var texto = ' elevado a ';
+	
+		for(base=1; base<=20; base++)
+		{
+			
+			for(i=1, pot=base; i<=10 ; i++ , pot*=base )
+			{
+				document.write(base + texto + i + " = " + pot);
+				document.write("<br>");	
+
+			}
+			
+			document.write("<br><br>");
+		}
+				
+			
+		document.write("<br><h2>Tipos especiais: </h2>");
+		document.write("2 dividido por 0 = "+ 2/0); //Infinity
+		document.write('<br>');
+		document.write("-2 dividido por " + 0 + ' = ' + -2/0); //-Infinity  
+		document.write('<br>');
+		document.write("0 dividido por " + 0 + ' = ' + 0/0); //NaN
+	</script>
+</body>
+</html>

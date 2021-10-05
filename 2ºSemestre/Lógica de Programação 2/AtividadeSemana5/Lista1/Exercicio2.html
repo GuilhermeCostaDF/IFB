@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <style type="text/css">
+        body{
+            background-color: rgb(53, 51, 51);
+            font: normal 15pt Arial;
+        }
+
+        header{
+            text-align: center;
+            color: aliceblue;
+        }
+
+        section{
+            background-color: rgb(223, 223, 223);
+            border-radius: 10px;
+            padding: 10px;
+            width: 600px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgb(54, 54, 54);
+        }
+
+        #enunciado{
+            font-size: 12pt;
+        }
+
+        select{
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+
+        footer {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 10pt;
+
+        }
+        
+        
+        #res{
+            display: block;
+            margin: 30px auto 10px auto;
+            width: 400px;
+            height: auto;
+            font-size: 15pt;
+            color:rgb(31, 31, 31);
+            
+        }  
+
+        #res p{
+            text-align: center;
+        }
+
+        #alignCenter{
+        	text-align: center;
+        }
+
+        #btn{
+        	display: block;
+        	margin: auto;
+        }
+        strong{
+        	color: #abf55d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header> 
+        <h1>Exercício 2</h1>    
+    </header>
+    <section>
+        <div>
+            <p id="enunciado">
+                2. Transforme agora o exemplo da Aula 4 (slide 11), o que calcula fatoriais dos números de 1 a 10, também em função, mas de forma que o valor de retorno seja o fatorial do número fornecido pelo usuário.
+            </p>
+            <p id="alignCenter">
+            	Número:
+            	<input type="number" id="txtnum1">
+             
+            </p>   
+            <input type="button" value="Calcular Fatorial" onclick="calcularFatorial()" id="btn">
+             
+        </div>
+        <div id="res">   
+
+        </div>
+        
+    </section>
+    <footer>
+        Developed by <strong>Guilherme Costa</strong> - 2021  
+    </footer>
+
+    <script type="text/javascript">
+
+    	let res = document.querySelector('div#res');
+    	let n1 = document.querySelector('input#txtnum1');
+
+        function calculoFatorial(number){
+            var number=number;
+            var resultado=1;
+            for(let cont=1;cont<=number;cont++){
+                resultado*=cont;
+            }
+            return resultado;
+        }
+
+        function calcularFatorial(){
+            var num = Number(n1.value);
+            var fatorial=calculoFatorial(num);
+            res.innerHTML=(`<p>${num}! = ${fatorial.toLocaleString('pt-br')}</p>`);
+            n1.value='';
+            n1.focus();
+        }
+
+    </script>
+</body>
+</html>

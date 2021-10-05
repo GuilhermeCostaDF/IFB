@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color:#FFEEBB;
+}
+
+a:visited{
+    color: #DDCC99;
+}
+
+body{
+    background-image: url(../img/Fundo.jpg); 
+    color: #FFEEBB;
+    font-size: 16px;
+    font-family: "Verdana", "Liberation"; 
+}
+
+header{
+    display: block;
+    margin-bottom: 1px;
+}
+
+.imgLogo{
+    height: auto;
+    border-bottom: #FFEEBB solid 3px;
+    margin-bottom: 6px;
+    padding-bottom: 15px;
+}
+
+.ender{
+    text-align: right;
+    font-size: 16px;
+    line-height: 150%;
+    float: right;
+}
+
+.ender ul{
+    list-style: none;
+}
+
+nav{
+    display: block;
+    width: 20%;
+    float: left;
+}
+
+nav ul{
+    line-height: 200%;
+    color: #FFEEBB;
+    list-style-type: circle;
+    margin-top: 30px;
+}
+
+section{
+    display: block;
+    width: 77%;
+    float: right;
+}
+
+.apres{
+    text-align: center;
+}
+
+/** PÁGINA HISTORIA **/
+/** PÁGINA HISTORIA **/
+/** PÁGINA HISTORIA **/
+
+.historia{
+    text-align: justify;
+    display: block;
+}
+h3{
+    margin-bottom: 15px;
+}
+
+.imgdir{
+    margin: 12px 10px 4px 12px;
+    float: right;
+}
+
+.imgesq{
+    margin: 12px 12px 4px 0px;
+    float:left;
+}
+
+.font{
+    margin-top: 10px;
+    text-align: right;
+    font-style: italic;
+}
+
+/** PÁGINA SACHES **/
+/** PÁGINA SACHES **/
+/** PÁGINA SACHES **/
+
+
+ol{
+    line-height: 200%;
+}
+.listaSaches ul{
+    list-style-type: circle;
+}
+
+.popUp body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff5d9;
+    font-size: 12px;
+    
+}
+
+.popUp h1{
+    font-size: 14px;
+    margin:10px auto 10px auto;
+}
+
+.popUp h2{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.popUp ul{
+    display: block;
+    margin:auto;
+    padding: 5px;
+}
+
+.popUp li{
+    margin-bottom: 10px;
+}
+
+.popUp img{
+    width: 120px;
+    margin: 15px 0 15px 0;
+}
+
+img.decaf{
+    margin-left: 15px;
+}
+
+/** PÁGINA MÁQUINAS **/
+/** PÁGINA MÁQUINAS **/
+/** PÁGINA MÁQUINAS **/
+
+.tabInfo{
+    border: #664422 solid 1px;
+    border-collapse: collapse;
+    margin-top: 6px;
+    background-color: #FFFFFF;
+    color: #573218;
+    font-family: "Arial", "Ubuntu";
+    text-align: center;
+}
+
+.tabInfo a{
+    color: #573218;
+}
+
+.tabInfo a:hover{
+    color: #440909;
+}
+
+.tabInfo a:active{
+    color: #662222;
+}
+
+td,th{
+    border: #664422 solid 2px;
+    padding: 6px 12px 6px 12px;
+}
+
+.linTH{
+    color: #FFFFFF;
+    background-color: #907968;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.colTH{
+    color:#573218;
+    background-color: #EACEAC;
+    text-align: left;
+}
+
+.preco{
+    color: #CC0000;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+#fotoProduto{
+    width: 120px;
+    height: auto;
+    box-sizing: border-box;
+}
+
+#fotoProduto img{
+    width: 100%;
+}
+
+/** PÁGINA COMPRAS **/
+/** PÁGINA COMPRAS **/
+/** PÁGINA COMPRAS **/
+
+form{
+    float: right;
+    display: block;
+}
+
+label[for="nome"], label[for="telefone"],label[for="endereco"]{
+    float: left;
+    width: 80px;
+    padding-top: 8px;
+}
+
+input .fsForm{
+    float: left;
+}
+fieldset{
+    background-color: #907968;
+    padding: 10px;
+}
+
+.fsForm{
+    width: 524px;
+    clear: both;
+}
+
+.fsResEsq{
+    width: 200px;
+    height: 280px;
+    float: left;
+}
+
+.fsResDir{
+    width:280px;
+    height: 280px;
+    float: right;
+}
+
+#endereco{
+    width: 403px;
+}
+#telefone{
+    width: 120px;
+}
+#email{
+    width: 195px;
+}
+
+#cpf{
+    width:160px
+}
+
+input{
+    border:none;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+select{
+    width: 100px;
+}
+
+#maquinas{
+    width:110px;
+    border:none;
+    border-radius: 3px;
+}
+
+#saches{
+    width: 130px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border:none;
+    border-radius: 3px;
+}
+
+button{
+    float: right;
+    border-radius: 3px;
+    border: none;
+    width: 70px;
+    padding: 3px;
+}
+
+#selecionadosTxtArea{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    width: 200px;
+    height: 80px;
+}
+
+
+#valorRes{
+    width: 100px;
+    height: 20px;
+    margin: 0;
+    float: right;
+    display: flex;
+    text-align: center;
+    color: #612b05;
+}
+
+
+.fsResDir label{
+    margin-left: -10px;
+}
+
+
+.dadosCartao{
+    margin-top: 30px;
+}
+
+#validadeMes{
+    width: 30px;
+}
+
+#validadeAno{
+    width: 60px;
+}
+
+#numeroCartao{
+    width: 140px;
+}
+
+.botoes button{
+    margin-top: 20px;
+    margin-left: 5px;
+    padding: 5px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+</head>
+<style type="text/css">
+
+body{
+    background-color: rgb(24, 24, 24);
+    font: normal 15pt Arial;
+}
+
+header{
+    text-align: center;
+    color: rgb(221, 221, 221);
+}
+
+
+#res{
+    display: block;
+    margin: auto;
+    width: 600px;
+    height: 400px;
+    
+}
+
+section{
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 700px;
+    height: auto;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgb(54, 54, 54);
+    position: relative;
+
+}
+
+footer {
+    color: rgb(97, 255, 145);
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 10pt;
+
+}
+
+button{
+	display: block;
+	margin: 15px auto 15px auto;
+	padding: 10px;
+
+}
+
+img{
+    margin-top: 40px;
+    max-width: 600px;   
+}
+
+
+</style>
+<body onload="slide1()">
+    <header>  
+        <h1>Atividade 2</h1> 
+    </header>
+    <section>
+        <div>
+            <div id="res">
+                <img src="botafogo1.jpeg" alt="slide show" id="banner">
+            </div>    
+            <button onclick="pararApresentacao()">Parar apresentação</button>
+        </div>
+                
+    </section>
+    <footer>
+        Developed by Guilherme Costa - 2021  
+    </footer>
+
+
+    <script type="text/javascript">
+
+    var intervalo = 3000; //3segundos
+    var t;
+
+    function slide1(){
+        document.getElementById("banner").src="botafogo1.jpeg";
+        t=setTimeout("slide2()",intervalo);
+    }
+    function slide2(){
+        document.getElementById("banner").src="botafogo2.jpg"
+        t=setTimeout("slide3()",intervalo);
+    }
+    function slide3(){
+        document.getElementById("banner").src="botafogo3.jpeg"
+        t=setTimeout("slide1()",intervalo);
+    }
+
+    function pararApresentacao(){
+        clearTimeout(t);    
+    }
+    </script>    
+</body>
+</html>

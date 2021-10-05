@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(212, 212, 212);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        color: rgb(24, 24, 24);
+        margin-bottom: 10px;
+    }
+    p{
+        padding: 10px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .resultado{
+        color:rgb(0, 106, 192);
+        font-size: 22px;
+    }
+    
+</style>
+<body>
+    <h1>Exercício 4</h1>
+    <p>4. Desenvolva, utilizando o laço while, a codificação para o seguinte problema: apresentar a
+        soma dos cem primeiros números inteiros, representados pela sequência
+        1+2+3+4+5...+98+99+100.</p>    
+</body>
+<script>
+    
+    var cont, soma
+
+    cont=1
+    soma=0
+
+    while(cont <= 100){
+        soma=soma+cont
+        cont++
+    }
+
+    document.write('<p class="resultado">'+ "Soma dos cem primeios números inteiros: "+soma + '</p>')
+    
+    
+</script>
+</html>

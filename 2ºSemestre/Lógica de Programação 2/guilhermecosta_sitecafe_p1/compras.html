@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sitecafe_p1.css">
+    <title>Compras</title>
+</head>
+<body>
+    <header>
+        <img class ="imgLogo" src="./img/Logo_pequeno.png" alt="">
+        <div class="ender">
+            <ul>
+                <li>Avenida Mochaccino, 10</li>
+                <li>Tel:(21) 1234-5678</li>
+                <li>contato@coffee.com.br</li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicial</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="maquinas.html">Máquinas</a></li>
+            <li><a href="saches.html">Saches</a></li>
+            <li><a href="#">Compras</a></li>
+        </ul>    
+    </nav>
+    <section>
+        <form>
+            <fieldset class="fsForm"> 
+            <legend>Dados de Identificação</legend>   
+                
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome">
+                <label for="cpf">CPF:</label>
+                <input type="text" name="cpf" id="cpf">
+            </p>
+            <p>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </p>    
+            
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco"> 
+            </p>
+            </fieldset>
+        
+            <fieldset class="fsResEsq">
+                <legend>Produtos</legend>
+                <label for="maquinas">
+                    Máquinas:
+                    <select name="maquinas" id="maquinas">
+                        <option value="">   ---</option>
+                        <optgroup label="Dolce Gusto">
+                            <option value="piccolo">Piccolo </option>    
+                        </optgroup>
+                        <optgroup label="Nespresso">
+                            <option value="inissia">Inissia C40 </option> 
+                            <option value="uc50">U C50</option>    
+                        </optgroup>
+                        <optgroup label="Senseo">
+                            <option value="hd">HD7811/96 </option>    
+                        </optgroup>
+                            
+                    </select>
+                </label>
+
+                <label for="saches">
+                    Sachês:
+                    <select name="saches" id="saches">
+                        <option value="">   ---</option>
+                        <optgroup label="Dolce Gusto">
+                            <option value="expresso">Expresso</option>
+                            <option value="descafeinado">Descafeinado</option>    
+                        </optgroup>
+                        <optgroup label="Nespresso">
+                            <option value="livanto">Livanto</option> 
+                            <option value="ristretto">Ristretto</option>
+                            <option value="vanillo">Vanillo</option>    
+                        </optgroup>
+                        <optgroup label="Senseo">
+                            <option value="classico">Clássico</option>
+                            <option value="intenso">Intenso</option>    
+                        </optgroup>
+                    </select>
+                </label>
+
+                <label for="selecionados">
+                    Selecionados:
+                    <button id="removerBtn">remover</button>
+                </label>
+                <textarea name="selecionados" id="selecionadosTxtArea" ></textarea>
+                
+                <label for="valor">
+                        Valor:
+                        <input type="text" id="valorRes">     
+                </label>
+            
+            </fieldset> 
+        
+            <fieldset class="fsResDir">
+                <legend>Forma de Pagamento</legend>
+                <input type="radio" name="cartao" id="cartao" value="cartao">
+                <label for="cartao">Cartão</label> 
+
+                <input type="radio" name="cartao" id="cheque" value="cheque">
+                <label for="cheque">Cheque</label>
+
+                <input type="radio" name="cartao" id="dinheiro" value="dinheiro">
+                <label for="dinheiro">Dinheiro</label>  
+
+                <fieldset class="dadosCartao">
+                    <legend>Dados do Cartão</legend>
+
+                    <input type="radio" name="cartaoImg" id="visaCard" value="visa">
+                    <label for="visaCard"> <img src="./img/visa.png" alt="Cartão Visa"> </label> 
+
+                    <input type="radio" name="cartaoImg" id="masterCard" value="master">
+                    <label for="masterCard"><img src="./img/master.png" alt="Cartão Master"></label>
+
+                    <input type="radio" name="cartaoImg" id="amexCard" value="amex">
+                    <label for="amexCard"><img src="./img/amex.png" alt="Cartão Amex"></label>
+
+                    <p>
+                        Validade:<input type="number" id="validadeMes" name="txtValidadeMes"> /<input type="number" id="validadeAno" name="txtValidadeAno">
+                    </p>
+
+                    <p>
+                        Número: <input type="text" id="numeroCartao" name="txtNumeroCartao">
+                    </p>
+                </fieldset>
+
+            </fieldset>
+
+            <div class="botoes">
+                <button id="limparBotao" value="limpar">Limpar</button>   
+                <button id="enviarBotao" value="enviar">Enviar</button>    
+            </div>   
+        </form>
+
+        
+    
+    </section>
+        
+</body>
+</html>

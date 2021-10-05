@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<style type="text/css">
+
+body{
+    background-color: rgb(46, 51, 68);
+    font: normal 15pt Arial;
+}
+
+header{
+    text-align: center;
+    color: rgb(221, 221, 221);
+}
+
+#date{
+    background-color: rgb(94, 94, 94);
+    width: 200px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#dateText{
+    color: rgb(212, 212, 212);
+    line-height: 150%;
+}
+
+section{
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    padding: 10px;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgb(54, 54, 54);
+
+}
+
+footer {
+    color: rgb(97, 255, 145);
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 10pt;
+
+}
+
+button{
+	display: block;
+	margin: 15px auto 15px auto;
+	padding: 10px;
+
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: auto;
+  padding: 15px;
+}
+
+#destaque{
+    color: rgb(255, 0, 0);
+}
+
+</style>
+<body>
+    <header>  
+        <div id="boxDate">
+        </div>  
+    </header>
+    <section>
+        <div>
+            <div id="res">
+            </div>    
+        </div>
+                
+    </section>
+    <footer>
+        Developed by Guilherme Costa - 2021  
+    </footer>
+
+
+    <script type="text/javascript">
+        let dateBox = document.getElementById('boxDate');
+        let res = document.getElementById('res');
+        res.innerHTML+='';
+
+        mes = new Array(12);
+		mes[0] = "janeiro";
+		mes[1] = "fevereiro";
+		mes[2] = "março";
+		mes[3] = "abril";
+		mes[4] = "maio";
+		mes[5] = "junho";
+		mes[6] = "julho";
+		mes[7] = "agosto";
+		mes[8] = "setembro";
+		mes[9] = "outubro";
+		mes[10] = "novembro";
+		mes[11] = "dezembro";
+		semana = new Array("domingo","segunda", "terça", "quarta","quinta", "sexta", "sábado");
+		var hoje = new Date();
+		//Obtém a data de hoje
+		var AnoAtual=hoje.getFullYear();
+		var MesAtual=hoje.getMonth();
+		var DiaAtual=hoje.getDate(); 
+        var bissexto = false;
+        
+        
+        if(AnoAtual % 100 != 0 && AnoAtual % 4 == 0 || AnoAtual % 400 == 0){
+            bissexto = true;
+        }
+
+		dateBox.innerHTML=`<p id="dateText">Hoje é ${semana[hoje.getDay()]}, <br/> ${DiaAtual} de ${mes[MesAtual]} de ${AnoAtual}</p>`;
+
+        var table='';
+        table+=`<table><tbody>`;
+       /* table+=`<tr>
+                            <td>DOM</td>
+                            <td>SEG</td>
+                            <td>TER</td> 
+                            <td>QUA</td> 
+                            <td>QUI</td> 
+                            <td>SEX</td> 
+                            <td>SAB</td>
+                        </tr>`;
+*/
+        switch(MesAtual){
+
+            case 0: 
+                table+=`<tr>`    
+                for(var i=1;i<=31;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break;
+
+            case 1: 
+                
+                if(bissexto == true){
+                    table+=`<tr>`    
+                    for(var i=1;i<=29;i++){
+                        if(i % 7 != 0){
+                            if(i==DiaAtual){
+                                table+=`<td id="destaque">${i}</td>`;    
+                            }
+                            else{
+                                table+=`<td>${i}</td>`;
+                            }
+                        }   
+                        else{
+                            if(i==DiaAtual){
+                                table+=`<td id="destaque">${i}</td></tr>`;    
+                            }
+                            else{
+                                table+=`<td>${i}</td></tr>`;
+                            }       
+                    }
+                    
+                    }    
+                }
+                else{
+                    table+=`<tr>`    
+                    for(var i=1;i<=28;i++){
+                        if(i % 7 != 0){
+                            if(i==DiaAtual){
+                                table+=`<td id="destaque">${i}</td>`;    
+                            }
+                            else{
+                                table+=`<td>${i}</td>`;
+                            }
+                        
+                        }
+                        else{
+                            if(i==DiaAtual){
+                                table+=`<td id="destaque">${i}</td></tr>`;    
+                            }
+                            else{
+                                table+=`<td>${i}</td></tr>`;
+                            }
+                        
+                        }
+                    }
+                }
+                
+                break; 
+
+            case 2: 
+                table+=`<tr>`    
+                for(var i=1;i<=31;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break;
+            case 3: 
+                table+=`<tr>`    
+                for(var i=1;i<=30;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break;
+
+            case 4: 
+                table+=`<tr>`    
+                for(var i=1;i<=31;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break;
+
+            case 5: 
+                table+=`<tr>`    
+                for(var i=1;i<=30;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break; 
+
+            case 6: 
+                table+=`<tr>`    
+                for(var i=1;i<=31;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break;
+
+            case 7: 
+                table+=`<tr>`    
+                for(var i=1;i<=31;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break; 
+
+            case 8: 
+                table+=`<tr>`    
+                for(var i=1;i<=30;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                }
+                
+                break;
+
+            case 9: 
+                table+=`<tr>`    
+                for(var i=1;i<=31;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break;
+
+            case 10: 
+                table+=`<tr>`    
+                for(var i=1;i<=30;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break;
+            case 11: 
+                table+=`<tr>`    
+                for(var i=1;i<=31;i++){
+                    if(i % 7 != 0){
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td>`;
+                        }
+                        
+                    }
+                    else{
+                        if(i==DiaAtual){
+                            table+=`<td id="destaque">${i}</td></tr>`;    
+                        }
+                        else{
+                            table+=`<td>${i}</td></tr>`;
+                        }
+                        
+                    }
+                    
+                }
+                
+                break;            
+        
+            default:
+                res.innerHTML=`<p>ERRO AO IDENTIFICAR A DATA</p>`;
+                break;
+        }          
+                
+        table+=`</tbody></table>`;
+
+        res.innerHTML+= table; // desenha a tabela na tela
+
+
+
+
+
+
+
+    </script>    
+</body>
+</html>

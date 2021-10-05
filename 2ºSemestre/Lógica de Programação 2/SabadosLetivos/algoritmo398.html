@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 401</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+
+        var op, c,d, posmenor, posmaior;
+        var dados1 = new Array(50), dados2 = new Array(50), dados3 = new Array(50), nome;
+        var milha = new Array(50), milhas;
+
+        for(c=0;c<5;c++){
+            milha[c]=0;
+        }
+        c=0;
+        do{
+            op= parseInt(window.prompt("*************************\n" +
+                                    "M E N U" + 
+                                    "\n**************************" +
+                                    "\n 1 - cadastra dados do cliente" +
+                                    "\n 2 - cadastra milhagem do cliente" +
+                                    "\n 3 - lista milhagem do cliente" +
+                                    "\n 4 - imprime os nomes que tem maior e menos milhagem" +
+                                    "\n 5 - imprime os nomes e as milhagens" +
+                                    "\n 6 - Sair"));
+            
+            switch(op){
+                case 1: 
+                    if(c<50){
+                        dados1[c]=window.prompt(`${c+1}- Nome:`);
+                        dados2[c]=window.prompt(`Endereço:`);
+                        dados3[c]=window.prompt(`Telefone:`);
+                        c++;
+                    }
+                    else{
+                        alert("Arquivo Cheio!");
+                    }
+                    break;
+                
+                case 2:
+                    nome = window.prompt("Nome para procura:");
+                    d=0;
+                    while(d< c-1 && nome != dados1[d]){
+                        d++;
+                    }
+                    if(nome == dados1[d]){
+                        milhas=parseInt(window.prompt(`Digite milhagem de ${dados1[d]}: `));
+                        milha[d]+=milhas;
+                    }
+                    else{
+                        alert("Nome não encontrado!")
+                    }
+                    break;
+                case 3:
+                    nome = window.prompt("Nome para procura:");
+                    d=0;
+                    while(d< c-1 && nome != dados1[d]){
+                        d++;
+                    }
+                    if(nome==dados1[d]){
+                        alert(`Milhagem de ${dados1[d]}: ${milha[d]}`);
+                    }
+                    else{
+                        alert("Não encontrado");
+                    }
+                    break;
+                case 4:
+                    d=1;
+                    posmenor=0;
+                    posmaior=0;
+
+                    while(d<=c){
+                        if(milha[d]>milha[posmaior]){
+                            posmaior=d;
+                        }
+                        else{
+                            if(milha[d]<milha[posmenor]){
+                                posmenor=d;
+                            }
+                        }
+                        d++;
+                    }
+                    document.write( "Dados da pessoa de maior milhagem");
+                    document.write(`</br>`)
+                    document.write( "Nome: ",dadosl[posmaior]);
+                    document.write(`</br>`)
+                    document.write( "Endereco: ",dados2[posmaior]);
+                    document.write(`</br>`)
+                    document.write( "Telefone: ",dados3[posmaior]);
+                    document.write(`</br>`)
+                    document.write( "Milhagem: ",milha[posmaior]);
+                    document.write(`</br></br>`);
+                    document.write( "Dados da pessoa de menor milhagem");
+                    document.write(`</br>`)
+                    document.write( "Nome: ",dadosl[posmenor]);
+                    document.write(`</br>`)
+                    document.write( "Endereco: ",dados2[posmenor]);
+                    document.write(`</br>`)
+                    document.write( "Telefone: ",dados3[posmenor]);
+                    document.write(`</br>`)
+                    document.write( "Milhagem: ",milha[posmenor]);
+                    break;
+                case 5:
+                    document.write(`Listagem</br>`);
+                    for(d=0;d<c;d++){
+                        document.write(`${d}- ${dados1[d]}: ${milha[d]}`);
+                    } 
+                    break;
+
+                case 6:
+                    alert("BOA VIAGEM");
+                    break;
+                default:
+                    alert("OPÇÃO INVALIDA");
+            }
+        }while(op!=0);
+     
+       
+    </script>
+</body>
+</html>

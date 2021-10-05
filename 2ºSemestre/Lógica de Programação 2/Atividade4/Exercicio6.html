@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+    <style type="text/css">
+        body{
+            background-color: rgb(53, 51, 51);
+            font: normal 15pt Arial;
+        }
+
+        header{
+            text-align: center;
+            color: aliceblue;
+        }
+
+        section{
+            background-color: rgb(223, 223, 223);
+            border-radius: 10px;
+            padding: 10px;
+            width: 600px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgb(54, 54, 54);
+        }
+
+        #enunciado{
+            font-size: 13pt;
+            text-align: justify;
+        }
+
+        footer {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 10pt;
+
+        }
+
+        #txtn{
+            width: 150px;
+        }
+
+        input{
+            display: block;
+            margin: auto;
+            padding: 10px;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        #res{
+            display: block;
+            margin: auto;
+            color: rgb(14, 14, 14);
+            font-size: 20pt;           
+            
+        }
+
+        img{
+            width: 400px;
+        }
+
+
+        table{
+            width: 300px;
+            margin:auto;
+        }
+       
+        
+        table td {
+            color: rgb(26, 26, 26);
+            border:solid 4px red;
+            border-top-color:#cccccc;
+            border-right-color:#000000;
+            border-bottom-color:#000000;
+            border-left-color:#cccccc;
+            padding: 2px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <header> 
+        <h1>Exercício 6</h1>    
+    </header>
+    <section>
+        <div>
+            <p id="enunciado">
+                6. Crie uma página com um código JavaScript para gerar a tabuada de multiplicação conforme é mostrado na figura abaixo
+            </p> 
+            <p>
+                <img src="image.png" alt="Tabuada">
+            </p>
+            <p>
+                <input type="button" value="Gerar Código" id="btnadv" onclick="gerarCodigo()">
+            </p>
+        </div>
+        <div id="res"> 
+            
+        </div>
+        
+    </section>
+    <footer>
+        Developed by <strong>Guilherme Costa</strong> - 2021  
+    </footer>
+
+    
+    <script type="text/javascript">
+
+    let res=document.querySelector('div#res');  
+       
+
+    function gerarCodigo(){
+
+        var table='';
+       
+        table+='<tbody> <tr bgcolor="#ff809d"> <td>  x </td>';
+       
+        for(cont=1;cont<=9;cont++){
+            
+            table+= '<td>'+ cont + ' </td> ';
+        }
+
+        table+='</tr>';
+
+        for(var i=1; i<=9;i++){
+            table+='<tr>' 
+            table+= '<td bgcolor="#ff809d">'+ i + '</td>';
+            for(var j=1;j<=9;j++){                
+                table+= '<td bgcolor="#02e83c">'+ i*j +'</td>' ;      
+            }
+            table+='</tr>'  
+        }
+
+        table+='</tbody>'
+
+        res.innerHTML=('<table>' + table +'</table>');
+
+       /* 
+       
+        ESBOÇO DA RESOLUÇÃO
+
+        res.innerHTML='';
+
+        res.innerHTML+=("x");
+        for(cont=1;cont<=9;cont++){
+            
+            res.innerHTML+=` ${cont} `;
+        }
+        res.innerHTML+=`<br/>`
+        for(var i=1; i<=9; i++){   
+            res.innerHTML+=`${i}`;
+            for(var j=1; j<=9; j++){
+                res.innerHTML+=` ${i*j}`;    
+            }
+            res.innerHTML+=("<br/>");
+        }
+        */
+
+        
+    }
+            
+    </script>
+</body>
+</html>

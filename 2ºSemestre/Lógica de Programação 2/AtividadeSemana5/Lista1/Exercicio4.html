@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+    <style type="text/css">
+        body{
+            background-color: rgb(53, 51, 51);
+            font: normal 15pt Arial;
+        }
+
+        header{
+            text-align: center;
+            color: aliceblue;
+        }
+
+        section{
+            background-color: rgb(223, 223, 223);
+            border-radius: 10px;
+            padding: 10px;
+            width: 600px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgb(54, 54, 54);
+        }
+
+        #enunciado{
+            font-size: 12pt;
+        }
+
+        select{
+            width: 400px;
+            display: block;
+            margin: auto;
+        }
+
+        footer {
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 10pt;
+
+        }
+        
+        #container{
+            width: 600px;
+            height: auto;
+            box-sizing: border-box;
+            display: flex;
+
+        }
+
+        #questao1,
+        #questao2{
+            box-sizing: border-box;
+            width: 50%;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #res1, #res2{
+            box-sizing: border-box;
+            display: block;
+            margin: auto;
+            height: auto;
+            font-size: 15pt;
+            color:rgb(31, 31, 31); 
+        }  
+        a{
+            text-decoration: none;
+            color: #14731d;
+        }
+
+        strong{
+        	color: #abf55d;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header> 
+        <h1>Exercício 4</h1>    
+    </header>
+    <section>
+
+        <div>
+            <p id="enunciado">
+                4. Crie uma página com dois links: o primeiro executa uma função que converte um número de hexadecimal para decimal e o segundo executa uma função que converte um número de graus para radianos.
+            </p>
+           
+            <div id="container">
+                <div id="questao1">
+                    Hexadecimal para Decimal
+                    <p id="alignCenter">      
+                        <input type="text" id="txtnum1">
+                    </p>
+                    <a href="javascript:converterHexDec()">Converter</a>
+                     
+                    <div id="res1">   
+                    </div>      
+                </div>
+
+                <div id="questao2">
+                    Graus para Radianos
+                    <p id="alignCenter">       
+                        <input type="number" id="txtnum2">
+                    </p>
+                    <a href="javascript:converterRad()">Converter</a> 
+                    <div id="res2">   
+                    </div>
+                    
+                </div>       
+            </div>        
+        </div>
+
+    </section>
+
+    <footer>
+        Developed by <strong>Guilherme Costa</strong> - 2021  
+    </footer>
+
+    <script type="text/javascript">
+        
+    	let res1 = document.querySelector('div#res1');
+        let res2 = document.querySelector('div#res2');
+    	let n1 = document.querySelector('input#txtnum1');
+        let n2 = document.querySelector('input#txtnum2')
+
+        function converterHexDec(){
+            res1.innerHTML='';
+            var numeroHex = n1.value;
+            var decimal= parseInt(numeroHex, 16);
+            res1.innerHTML+=`${decimal}`;
+        }
+
+        function grausParaRad(grau){
+            var grau = grau;
+            var rad = grau * Math.PI/180;
+            return rad;
+        }
+
+        function converterRad(){
+            var grau= Number(n2.value);
+            var rad= grausParaRad(grau);
+            res2.innerHTML=`<p>${rad.toFixed(8)}</p>`;    
+        }
+
+    </script>
+</body>
+</html>

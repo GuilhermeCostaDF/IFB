@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Algoritmo 464 (página 405)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// Criar uma função que converta radianos para graus. 
+
+		function radParaGraus(valor){
+			var valor;
+			valor = valor * 180 / Math.PI;
+			return valor;			
+		}
+
+		var valor = Number(window.prompt("Digite o valor (radianos):"));
+		document.write(`Radianos: ${valor}  || Graus: ${(radParaGraus(valor)).toFixed(2)} `);
+
+	</script>
+</body>
+</html>

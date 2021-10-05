@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algoritmo 254 </title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		//Criar um algoritmo que entre com dez notas de cada aluno de uma turma de 20
+		//alunos e imprima:
+		//- a média de cada aluno
+		//- a média da turma
+		//- o percentual de alunos que tiveram medias maiores ou iguais a 5.0.
+
+		
+		var mediaAluno=0;
+		var mediaMaior5=0;
+		var somaTotal=0;
+
+		for(var i=1; i<=20; i++){
+
+			var soma=0;
+
+			for(var j=1; j<=10;j++){
+
+			    var nota = Number(window.prompt(`Digite a ${j}ª nota do ${i}º aluno:`));
+
+				// var nota = Math.random() * 10 + 1; // Gera um número aleatório entre 0-10;
+				
+				soma+= nota;
+			}
+
+			mediaAluno = soma / 10;
+
+			if(mediaAluno>=5){
+				mediaMaior5++;
+			}
+
+			console.log(`Média do ${i}º aluno: ${mediaAluno.toFixed(2)}`);
+
+			somaTotal+= mediaAluno;
+		}
+
+		console.log(`Média da turma: ${(somaTotal/20).toFixed(2)}`);
+		console.log(`Percentual de aprovados: ${mediaMaior5*100/20}%`);
+		
+
+	</script>
+</body>
+</html>

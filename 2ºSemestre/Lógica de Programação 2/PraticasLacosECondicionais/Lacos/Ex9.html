@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algoritmo 265 </title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		//Ler vários números e informar quantos números entre 100 e 200 foram digitados. Quando o valor 0 (zero) for lido, o algoritmo deverá cessar sua execução.
+
+		var qtd = 0;
+		var num = Number(window.prompt("Digite um número [ 0 para cancelar ]: "));
+
+		while (num != 0){
+			if(num >= 100 && num <= 200){
+				qtd++;
+				console.log(qtd);
+			}
+			var num = Number(window.prompt("Digite um número [ 0 para cancelar ]: "));
+		}
+
+		if(qtd > 0){
+			console.log(`Foram digitados ${qtd} números entre 100 e 200`)
+		}
+		else{
+			console.log(`Nenhum número entre 100 e 200 foi digitado`)
+		}
+		
+	</script>
+</body>
+</html>

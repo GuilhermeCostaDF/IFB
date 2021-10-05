@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algoritmo 187</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		// Criar um algoritmo que calcule e imprima o valor de b elevado a n. O valor de n deverá ser maior do que 1 e inteiro e o valor de b maior ou igual a 2 e inteiro.
+
+		var resultado=1;
+
+		var b = parseInt(window.prompt("Digite o valor da base:"));
+
+		while(b < 2){
+			var b = parseInt(window.prompt("Maior ou igual a 2 e inteiro \nDigite o valor da base:"));	
+		}
+
+		var n = parseInt(window.prompt("Digite o valor do expoente: "));
+
+		while(n < 1){
+			var n = parseInt(window.prompt("Maior do que 1 e inteiro \nDigite o valor do expoente: "));
+		}
+
+		for(var cont=1; cont <=n; cont++){
+			resultado *= b;
+		}
+
+		console.log(`${b}^${n}: ${resultado.toLocaleString()}`);
+
+	</script>
+</body>
+</html>

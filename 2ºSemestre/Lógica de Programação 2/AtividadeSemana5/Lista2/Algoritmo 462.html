@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Algoritmo 462 (página 403)</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		//Algoritmo 462 (página 403) - Criar um algoritmo que receba notas de três provas e calcular a sua média, mas utilizando uma função. 
+
+		function media(notas){
+
+			var notasAlunos=notas;
+			var summ=0;
+			for(let pos in notasAlunos){
+				summ+=notasAlunos[pos];
+			}
+			var media = summ / notasAlunos.length;
+			return media;
+		}
+
+		var notas = [];
+		for(var cont=1; cont<=3; cont++){
+			var number= Number(window.prompt(`${cont}ª Nota:`));
+			notas.push(number);
+		}
+
+		for(var cont=1; cont<=3; cont++){
+			document.write(`${cont}ª nota: ${notas[cont-1]} <br/>`)
+		}		
+
+		document.write(`<br/>Média: ${media(notas)}`);
+
+	</script>
+</body>
+</html>

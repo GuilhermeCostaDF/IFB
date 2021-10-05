@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 97</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+        // Entrar comum número e informar se ele é divisível por 10, por 5, por 2 ou se não é
+        // divisível por nenhum destes.    
+        
+        var numero = Number(window.prompt("Primeiro número:"));
+        
+        if(numero % 10 === 0){
+            console.log(`O número ${numero} é divisivel por 10`);
+        }
+        else{
+            if(numero % 2 === 0){
+                console.log(`O número ${numero} é divisivel por 2`);    
+            }
+            else{
+                if(numero % 5 === 0){
+                    console.log(`O número ${numero} é divisivel por 10`)
+                }
+                else{
+                    console.log(`O número ${numero} não é divisivel por 10 nem por 5 nem por 2!!!`)
+                }    
+            }
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 356</title>
+</head>
+<style>
+    td{
+        text-align: center;
+    }
+</style>
+<body>
+    <script type="text/javascript">
+       
+        var nomes=[];
+        var pr1=[];
+        var pr2=[];
+        var medias=[];
+        var situacao=[];
+
+        for(var i=0; i<=14; i++){
+            nomes[i]=window.prompt(`${i+1}º Aluno: `);
+            //pr1[i]= Math.ceil(Math.random()*10);
+            //pr2[i]= Math.ceil(Math.random()*10);
+            pr1[i]=Number(window.prompt(`Primeira Nota:`));
+            pr2[i]=Number(window.prompt(`Segunda Nota:`));
+            medias[i]=Math.ceil((pr1[i]+pr2[i])/2);
+            if(medias[i]>=5){
+                situacao[i]= "AP";
+            }
+            else{
+                situacao[i]= "RP";
+            }
+        }
+
+        document.write(`<table cellspacing="5">`);
+        document.write(`<tr><th colspan="6" id="rel">Relação Final</th></tr>`);
+        document.write(`<tr><td></td><th>Nome</th><th>Prova 1</th><th>Prova 2</th><th>Média</th><th>Situação</th></tr>`);
+        for(var i=0;i<=14;i++){
+            document.write(`<tr><td>${i+1}.</td><td> ${nomes[i]}</td><td> ${pr1[i]}</td><td>${pr2[i]}</td><td>${medias[i]}</td><td>${situacao[i]}</td></tr>`);
+        }
+        document.write(`</table>`);
+
+    </script>
+</body>
+</html>

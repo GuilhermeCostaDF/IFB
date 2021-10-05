@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/sitecafe_p1.css">
+    <title>Máquinas</title>
+</head>
+<body>
+    <header>
+        <img class ="imgLogo" src="./img/Logo_pequeno.png" alt="">
+        <div class="ender">
+            <ul>
+                <li>Avenida Mochaccino, 10</li>
+                <li>Tel:(21) 1234-5678</li>
+                <li>contato@coffee.com.br</li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicial</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="#">Máquinas</a></li>
+            <li><a href="saches.html">Saches</a></li>
+            <li><a href="compras.html">Compras</a></li>
+        </ul>    
+    </nav>
+    <section>
+        <table>
+            <tr>
+                <th colspan="4" class="linTH">Máquinas de café</th>
+            </tr>
+            <tr>
+                <th class="linTH">Tipo</th>
+                <th class="linTH">Modelo</th>
+                <th class="linTH">Foto</th>
+                <th class="linTH">Preço</th>
+            </tr>
+            <tr>
+                <th class="colTH">Dolce Gusto</th>
+                <td class="tabInfo"><a href="javascript:infoPiccolo()">Piccolo</a></td>
+                <td rowspan="5" class="tabInfo"><div id="fotoProduto"></div></td>
+                <td rowspan="5" class="tabInfo"><div id="precoProduto"></div></td>
+
+            </tr>
+            <tr>
+                <th rowspan="3" class="colTH">Nespresso</th>
+                <tr>
+                    <td class="tabInfo"><a href="javascript:infoInissia()">Inissia C40</a></td>
+                </tr>
+                <tr>
+                    <td class="tabInfo"><a href="javascript:infoC50()">U C50</a></td>
+                    
+                </tr>
+            </tr>
+            <tr>
+                <th class="colTH">Senseo</th>
+                <td class="tabInfo"><a href="javascript:infoHd()">HD7811/96</a></td>
+                
+            </tr>
+        </table>
+    </section>
+     
+    <script src="./js/maquinas.js"></script>
+</body>
+</html>

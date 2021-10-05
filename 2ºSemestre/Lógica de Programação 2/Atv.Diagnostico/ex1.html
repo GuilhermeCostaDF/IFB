@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(212, 212, 212);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        color: rgb(24, 24, 24);
+        margin-bottom: 10px;
+    }
+    p{
+        padding: 10px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .resultado{
+        color:rgb(0, 106, 192);
+        font-size: 22px;
+    }
+    .resultadof{
+        color:rgb(211, 0, 0);
+        font-size: 22px;
+    }
+</style>
+<body>
+    <h1>Exercício 1</h1>
+    <p>1. Elaborar um programa que deve apresentar a mensagem “O valor esta entre 20 e 90.”
+        somente se o valor fornecido para a variável numero estiver entre 20 e 90. Qualquer valor
+        fornecido fora da faixa definida deve acionar a mensagem “O valor não esta entre 20 e 90.”.</p>    
+</body>
+<script>
+    var numero
+    numero = parseInt(window.prompt("Digite um número"));
+    if(numero >= 20 && numero <= 90){
+        document.write('<p class="resultado" >' +"O valor está entre 20 e 90"+ '</p>')
+    }
+    else{
+        document.write('<p class="resultadof" >' +"O valor NÃO está entre 20 e 90"+ '</p>')
+    }
+</script>
+</html>

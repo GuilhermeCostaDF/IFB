@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(212, 212, 212);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        color: rgb(24, 24, 24);
+        margin-bottom: 10px;
+    }
+    p{
+        padding: 10px;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .resultado{
+        color:rgb(0, 106, 192);
+        font-size: 22px;
+    }
+    
+</style>
+<body>
+    <h1>Exercício 6</h1>
+    <p>6. Desenvolva, utilizando o laço do...while, a codificação do seguinte problema: exibir os
+        quadrados dos números inteiros de 15 a 200.</p>    
+</body>
+<script>
+    
+    var i = 15
+    var sqr
+    do{
+        sqr=Math.pow(i,2)
+        console.log("O quadrado do número " + i + " é igual a = " + sqr)
+        i++    
+    }while(i<=200)    
+    
+</script>
+</html>

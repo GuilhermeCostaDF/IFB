@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(196, 196, 196);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        color: rgb(24, 24, 24);
+        margin-bottom: 10px;
+    }
+    p{
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .resultado{
+        color:rgb(0, 106, 192);
+        font-size: 22px;
+    }
+</style>
+<body>    
+    <h1>Exercício 2</h1>
+    <p>2. Elaborar um programa que efetue a leitura de um valor numérico inteiro e apresente o
+        resultado caso não seja maior que 3 ou igual.</p>
+</body>
+<script>
+    var num
+    num = parseInt(prompt("Digite um numero inteiro"));
+    if(num < 3){
+        document.write('<p class="resultado" >' +num+ '</p>')
+    }
+    
+</script>
+</html>

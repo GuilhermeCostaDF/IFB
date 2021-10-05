@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 354</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var numeros=[];
+
+        for(var i=0;i<=14;i++){
+            numeros[i]= Number(window.prompt(`Número:`));
+        }
+
+        for(var i=0;i<=14;i++){
+            if(numeros[i] % 2 == 0){
+                document.write(`${i+1}. <strong>${numeros[i]}</strong> PAR<br/>`);    
+            }
+            else{
+                document.write(`${i+1}. <strong>${numeros[i]}</strong> ÍMPAR<br/>`);
+            }
+        }
+
+    </script>
+</body>
+</html>

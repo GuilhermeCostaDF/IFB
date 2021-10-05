@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo 359</title>
+</head>
+<style>
+    td { padding:10px; }
+    .tdEspaco { display: table; float:left; margin-left:10px; }
+</style>
+<body>
+    <script type="text/javascript">
+
+        var nomes=[], idades=[], lista=[], listaIdades=[];
+
+        for(var i=0; i<=19;i++){
+            //nomes[i]=Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5);
+            //idades[i]=Math.ceil(Math.random()*10)
+            nomes[i]=window.prompt("Nome:");
+            idades[i]= window.prompt("Idade:")
+            var inicialNome = nomes[i].substr(0,1);
+            if(inicialNome >= "l" && inicialNome <= "s" || inicialNome >= "L" && inicialNome <= "S" )
+                lista.push(nomes[i]);
+                listaIdades.push(idades[i]);
+        }
+
+        if(lista.length !== 0){
+            document.write(`Nomes encontrados: <br/><br/>`)
+            document.write(`<table cellspacing="5">`)
+            for(i=0; i<lista.length ;i++){
+                document.write(`<tr><td>Nome: ${lista[i]}</td><td class="tdEspaco">Idade: ${listaIdades[i]}</td></tr>`);
+            }
+            document.write(`</table>`)
+        }
+        else{
+            document.write(`Nenhum nome foi encontrado...`);     
+        }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1</title>
+</head>
+<style type="text/css">
+
+body{
+    
+    font: normal 15pt Arial;
+}
+
+header{
+    text-align: center;
+    color: rgb(221, 221, 221);
+}
+
+#date{
+    background-color: rgb(94, 94, 94);
+    width: 200px;
+    height: 100px;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#dateText{
+    color: rgb(212, 212, 212);
+    line-height: 150%;
+}
+
+section{
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    padding: 10px;
+    width: 500px;
+    height: auto;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgb(54, 54, 54);
+
+}
+
+footer {
+    color: rgb(97, 255, 145);
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 10pt;
+
+}
+
+input#botaoAtualizar{
+	display: block;
+	margin: 15px auto 15px auto;
+	padding: 10px;
+    width: 150px;
+    font-size: 16px;
+
+}
+input#corFundoTxt{
+    width: 255px;
+}
+input#imagemTxt{
+    width: 300px;
+}
+img{
+    width: 100%;
+}
+
+
+</style>
+<body style="background-color: #2e3344;">
+    <header>  
+        <h1>Atividade 1</h1> 
+    </header>
+    <section>
+        <div>
+            <div id="res">
+                <form action="">
+                    <p>
+                        Cor de fundo: <input type="text" name="corDeFundo" id="corFundoTxt" placeholder="#ffffff">
+                    </p>
+                    <p>
+                        Imagem: <input type="text" name="linkImagem" id="imagemTxt" placeholder="Endereço da imagem"> 
+                    </p>
+                    <input type="button" value="Atualizar" id="botaoAtualizar" onclick="atualizarPagina()">
+                </form>
+                <div id="imgDiv">
+
+                </div>
+            </div>    
+        </div>
+                
+    </section>
+    <footer>
+        Developed by Guilherme Costa - 2021  
+    </footer>
+
+
+    <script type="text/javascript">
+
+        function atualizarPagina(){
+
+            let imgDiv = document.getElementById("imgDiv")
+            imgDiv.innerHTML='';
+            let campoCor = document.getElementById("corFundoTxt");
+            let novaCor = campoCor.value;
+            let campoImg = document.getElementById("imagemTxt");
+            let enderecoImg = campoImg.value;
+
+            var img = document.createElement('img');
+            img.setAttribute('src', enderecoImg);
+            imgDiv.appendChild(img);
+
+
+            if(novaCor.length == 0){ 
+                novaCor = '#2e3344';
+                mudaCorBg(novaCor);
+            }
+            else{ 
+                mudaCorBg(novaCor);   
+            }    
+
+        }
+        function mudaCorBg(cor){
+            document.body.style.backgroundColor = cor;    
+        }
+
+        
+    </script>    
+</body>
+</html>

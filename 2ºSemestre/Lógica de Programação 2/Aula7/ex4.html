@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex4</title>
+</head>
+<style type="text/css">
+	body{
+    background-color: rgb(41, 116, 255);
+    font: normal 15pt Arial;
+}
+
+body{
+    background-color: rgb(46, 51, 68);
+    font: normal 15pt Arial;
+}
+
+header{
+    text-align: center;
+    color: rgb(221, 221, 221);
+}
+
+section{
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    padding: 10px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 3px 3px 10px rgb(54, 54, 54);
+}
+
+footer {
+    color: rgb(216, 216, 216);
+    text-align: center;
+    font-style: italic;
+    margin-top: 20px;
+    font-size: 10pt;
+
+}
+
+button{
+	display: block;
+	margin: 15px auto 15px auto;
+	padding: 10px;
+
+}
+</style>
+<body>
+    <header> 
+        <h1>Ex 4</h1>    
+    </header>
+    <section>
+        <div>
+        
+            <div id="res">
+            </div>    
+        </div>
+                
+    </section>
+    <footer>
+        Developed by Guilherme Costa - 2021  
+    </footer>
+    <script type="text/javascript">
+        let res = document.getElementById('res');
+    	for (n=1; n<= 5; n++){
+            var aluno = {
+                nome: prompt("Digite o nome do aluno"),
+                nota1: Number(prompt("Digite a nota 1")),
+                nota2: Number(prompt("Digite a nota 2")),  
+            }  
+            
+            res.innerHTML+=("Aluno(a): "+ aluno.nome + "<br/>"+ "Nota 1: "+aluno.nota1 + "<br/>" +"Nota 2: "+ aluno.nota2 + "<br/>" +"Média: "+ notaFinal()+ "<br/><br/>" )
+        }
+        function notaFinal(){
+            media =  (aluno.nota1+aluno.nota2)/2
+            return media
+        }
+    </script>    
+</body>
+</html>

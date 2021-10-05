@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Exemplo de JavaScript - Aula 2</title>
+	<script language="javascript">
+		var nome= prompt("Qual seu nome?","");	
+	</script>
+</head>
+<body>
+	<h2>Segundo exemplo de Javascript</h2>
+	<script language="javascript">
+		document.write("Bem-vindo, "+"<b>"+nome+"</b>"+"!");
+		idade= parseInt(prompt("Por favor, me diga sua idade:"));
+		alert("Espere um pouco");
+		var mensagem= "Você digitou: "+ idade;
+		confirm("Você digitou "+idade);
+		if(idade >= 18)
+		{
+			document.write("<br/> Idade confirmada! <br/>Aposte com sabedoria!<br/><br/>");
+			document.write("<button>ENTRAR</button>");
+		}
+		else
+		{
+			document.write("<h1>Site não permitido para menores de idade!</h1>");
+		}
+	</script>
+</body>
+</html>
